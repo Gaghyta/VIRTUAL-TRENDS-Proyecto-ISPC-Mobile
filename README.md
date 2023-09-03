@@ -2,8 +2,9 @@
 
 El producto consiste en una aplicación para teléfonos móviles que complementa el servicio de e-commerce que ofrece VIRTUAL TRENDS a través de su sitio web  donde comercializa prendas de indumentaria masculina, femenina y unisex, a través de imágenes 3D realizadas con tecnología de vanguardia a través del software CLO 3D. El sitio web ofrece actualmente la carga del talle personalizado (medidas corporales) a través de un formulario que el usuario debe completar. Sin embargo, muchos usarios no sabían tomarse sus  propias medidas y requerían asistencia de terceros. VIRTUAL TRENDS decidió tomar estas consideraciones y ampliar su servicio y funcionalidad mediante una aplicación móvil que permite gestionar turnos.
 
-![image](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/35cb0142-d46c-4e47-9c33-633ca9571de8)
+La aplicación les ofrece la posibilidad  de obtener una sesión de 30 minutos para escanear su cuerpo completo y tomar las medidas necesarias para la producción de cualquier prenda comprada en el sitio. Las medidas y el cuerpo escaneado pasan a conformar un avatar totalmente personalizado hecho de forma idéntica al usuario del servicio.
 
+Es requisito tener una cuenta y los datos verificados, así como abonar previamente el costo del servicio. De esta forma únicamente es garantizada y confirmada la reserva del turno
 
 
 ![HOME-APP](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/b071ecdf-a3a9-485c-bb76-b51476aca8b7)
