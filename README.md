@@ -1,10 +1,16 @@
 # VIRTUAL-TRENDS-Proyecto-ISPC-Mobile
 
 
+![HOME-APP](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/b071ecdf-a3a9-485c-bb76-b51476aca8b7)
 
 
+![HOME-MENU](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/ef2af6d6-c2b9-4aee-8f90-b80b23f62067)
 
 
+![CREA TU CUENT - INGRESA A TU CUENTA](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/20a5ee97-cb23-4776-88bd-c9cc66c023e9)
+
+
+![INGRESA A TU CUENTA - USUARIO CONTRASEÑA ](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/dfd56599-3e06-4ee8-8703-940574d32ef4)
 
 
 # Proyecto previo
