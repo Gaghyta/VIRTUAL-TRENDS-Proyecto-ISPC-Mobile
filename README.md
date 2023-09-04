@@ -1,10 +1,22 @@
 # VIRTUAL-TRENDS-Proyecto-ISPC-Mobile
 
+El producto consiste en una aplicación para teléfonos móviles que complementa el servicio de e-commerce que ofrece VIRTUAL TRENDS a través de su sitio web  donde comercializa prendas de indumentaria masculina, femenina y unisex, a través de imágenes 3D realizadas con tecnología de vanguardia a través del software CLO 3D. El sitio web ofrece actualmente la carga del talle personalizado (medidas corporales) a través de un formulario que el usuario debe completar. Sin embargo, muchos usarios no sabían tomarse sus  propias medidas y requerían asistencia de terceros. VIRTUAL TRENDS decidió tomar estas consideraciones y ampliar su servicio y funcionalidad mediante una aplicación móvil que permite gestionar turnos.
+
+La aplicación les ofrece la posibilidad  de obtener una sesión de 30 minutos para escanear su cuerpo completo y tomar las medidas necesarias para la producción de cualquier prenda comprada en el sitio. Las medidas y el cuerpo escaneado pasan a conformar un avatar totalmente personalizado hecho de forma idéntica al usuario del servicio.
+
+Es requisito tener una cuenta y los datos verificados, así como abonar previamente el costo del servicio. De esta forma únicamente es garantizada y confirmada la reserva del turno
 
 
+![HOME-APP](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/b071ecdf-a3a9-485c-bb76-b51476aca8b7)
 
 
+![HOME-MENU](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/ef2af6d6-c2b9-4aee-8f90-b80b23f62067)
 
+
+![CREA TU CUENT - INGRESA A TU CUENTA](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/20a5ee97-cb23-4776-88bd-c9cc66c023e9)
+
+
+![INGRESA A TU CUENTA - USUARIO CONTRASEÑA ](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/dfd56599-3e06-4ee8-8703-940574d32ef4)
 
 
 # Proyecto previo
