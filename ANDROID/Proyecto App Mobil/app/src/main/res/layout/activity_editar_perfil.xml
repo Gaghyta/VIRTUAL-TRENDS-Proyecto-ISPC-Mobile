@@ -23,7 +23,7 @@
         android:id="@+id/Frame"
         android:layout_width="411dp"
         android:layout_height="731dp"
-        android:background="#8D121111"
+        android:background="#CC191B1D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
