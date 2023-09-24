@@ -8,8 +8,9 @@
     tools:context=".HomeActivity">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:id="@+id/frameLayout2"
+        android:layout_width="409dp"
+        android:layout_height="265dp"
         android:background="#CC191B1D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +21,8 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_width="408dp"
+        android:layout_height="264dp"
         android:background="#B3191B1D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,12 +35,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="64dp"
         android:background="#D3FDFBFB"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/login_button"
         android:onClick="launchLoginActivity"
+        android:text="@string/login_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
@@ -49,13 +50,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="64dp"
         android:background="#BE1E1B1B"
+        android:onClick="launchRegisterActivity"
         android:text="@string/register_button"
         android:textColor="#FFFFFF"
-        android:onClick="launchRegisterActivity"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
