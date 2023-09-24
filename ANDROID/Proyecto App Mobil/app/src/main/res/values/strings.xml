@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VirtualTrendsMovile</string>
+    <string name="login_button">INICIAR SESIÓN</string>
+    <string name="register_button">CREAR CUENTA</string>
+    <string name="login_title">INGRESÁ A TU CUENTA</string>
+    <string name="email_title">email</string>
+    <string name="password_title">password</string>
 </resources>

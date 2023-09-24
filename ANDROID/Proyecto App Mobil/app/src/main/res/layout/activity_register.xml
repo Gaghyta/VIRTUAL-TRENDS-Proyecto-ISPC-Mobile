@@ -42,7 +42,7 @@
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress 4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress5" />
 
     <TextView
         android:id="@+id/textView4"
@@ -54,7 +54,7 @@
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress 5" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <TextView
         android:id="@+id/textView5"
@@ -84,7 +84,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress 5"
+        android:id="@+id/editTextTextEmailAddress5"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -97,7 +97,7 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress 4"
+        android:id="@+id/editTextTextEmailAddress4"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -110,20 +110,20 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress 2"
+        android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress "
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/Frame"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress "
+        android:id="@+id/editTextTextEmailAddress"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -145,7 +145,7 @@
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress 2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 
     <TextView
         android:id="@+id/textView6"
@@ -157,11 +157,11 @@
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress " />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress "
+        android:id="@+id/editTextTextEmailAddress"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
