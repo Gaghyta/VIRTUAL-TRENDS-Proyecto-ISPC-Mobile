@@ -7,6 +7,20 @@
     android:background="@drawable/fondo"
     tools:context=".HomeActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAccept"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="#BE1E1B1B"
+        android:text="@string/enter_button"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="411dp"
@@ -14,7 +28,7 @@
         android:background="#B3191B1D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -57,7 +71,6 @@
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPassword"

@@ -5,4 +5,8 @@
     <string name="login_title">INGRESÁ A TU CUENTA</string>
     <string name="email_title">email</string>
     <string name="password_title">password</string>
+    <string name="enter_button">CONFIRMAR</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_editar_perfil">Editar Perfil</string>
+
 </resources>
