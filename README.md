@@ -19,6 +19,13 @@ Es requisito tener una cuenta y los datos verificados, así como abonar previame
 ![INGRESA A TU CUENTA - USUARIO CONTRASEÑA ](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/dfd56599-3e06-4ee8-8703-940574d32ef4)
 
 
+
+# FLOW DEFINIDOS PARA EL TRABAJO EN REPOSITORIO:
+Trabajamos haciendo una rama por developer, y después una general por sprint (Ej: dev-Sprint0) para que de esa general del sprint se le pegue al main cuando este ok y se hayan subido todos los aportes del grupo. 
+Si algún/os developer/s quieren o necesitan hacer una rama feature, o una rama de fix, está habilitados a hacerla (Incluso para tener ramas entre dos alumnos).
+
+
+
 # Proyecto previo
 
 ### Presentación final 12:55
