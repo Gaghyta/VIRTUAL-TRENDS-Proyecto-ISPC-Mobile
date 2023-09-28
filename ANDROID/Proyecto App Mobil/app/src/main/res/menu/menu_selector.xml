@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/back"
+        android:title=""
+        android:icon="@drawable/back"
+        />
+    <item
+        android:id="@+id/info"
+        android:title=""
+        android:icon="@drawable/inf"
+        />
+    <item
+        android:id="@+id/map"
+        android:title=""
+        android:icon="@drawable/map"
+        />
+    <item
+        android:id="@+id/turn"
+        android:title=""
+        android:icon="@drawable/novedad"
+        />
+    <item
+        android:id="@+id/logout"
+        android:title=""
+        android:icon="@drawable/logout"
+        />
+</menu>

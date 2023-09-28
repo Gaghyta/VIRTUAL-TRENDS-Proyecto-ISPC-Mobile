@@ -34,7 +34,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".SelectorActivity"
             android:exported="false"></activity>
     </application>
 
