@@ -8,31 +8,29 @@
                                                    tools:context=".SelectorActivity">
 
     <EditText
-            android:id="@+id/input_15"
+            android:id="@+id/editEmail"
             android:layout_width="268dp"
             android:layout_height="54dp"
             android:background="#FFFFFF"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="80dp" android:layout_marginEnd="80dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="79dp"
-            app:layout_constraintTop_toBottomOf="@+id/tVContacto"/>
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="36dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textVEmail" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/textVAsunto"/>
     <EditText
-            android:id="@+id/input_16"
+            android:id="@+id/editAsunto"
             android:layout_width="268dp"
-            android:layout_height="54dp"
+            android:layout_height="60dp"
             android:background="#FFFFFF"
-            android:layout_marginBottom="38dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_17" android:layout_marginTop="31dp"
-            app:layout_constraintTop_toBottomOf="@+id/input_15" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="80dp" android:layout_marginEnd="80dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/textVAsunto" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textVMensaje"
+            app:layout_constraintStart_toStartOf="parent"/>
     <EditText
-            android:id="@+id/input_17"
+            android:id="@+id/editMensaje"
             android:layout_width="268dp"
-            android:layout_height="226dp"
+            android:layout_height="0dp"
             android:background="#FFFFFF"
-            android:layout_marginTop="38dp"
-            app:layout_constraintTop_toBottomOf="@+id/input_16" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textVMensaje" android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/botonEnv"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageView
@@ -40,78 +38,78 @@
             android:layout_width="119dp"
             android:layout_height="wrap_content"
             android:src="@drawable/logo"
-            android:layout_marginTop="638dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="53dp" android:layout_marginEnd="155dp"
+            app:layout_constraintTop_toBottomOf="@+id/botonEnv" android:layout_marginBottom="53dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="154dp" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.25" app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="10dp"/>
+
     <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_width="262dp"
+            android:layout_height="3dp"
             android:background="#F7F7F2"
             android:layout_above="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            tools:layout_editor_absoluteY="46dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="80dp"
-            android:layout_marginStart="80dp" android:id="@+id/bordeSup" app:layout_constraintHorizontal_bias="1.0"/>
+            android:id="@+id/bordeSup"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="44dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bordeInf" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="CONTACTO"
             android:layout_width="263dp"
-            android:layout_height="46dp" android:id="@+id/tVContacto"
-            android:layout_marginBottom="79dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_15" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="46dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="80dp" android:layout_marginEnd="80dp"
-            app:layout_constraintEnd_toEndOf="parent" android:textColor="#F7F7F2" android:textSize="23sp"
-            app:layout_constraintHorizontal_bias="0.5" android:textAlignment="center"
+            android:layout_height="0dp" android:id="@+id/tVContacto"
+            android:textColor="#F7F7F2" android:textSize="23sp"
+            android:textAlignment="center"
             android:fontFamily="@font/josefin_sans" android:includeFontPadding="false" android:textAllCaps="false"
-            android:textStyle="bold" android:paddingTop="12sp" android:paddingBottom="11sp"/>
-
+            android:textStyle="bold" android:paddingTop="12sp" android:paddingBottom="0sp"
+            app:layout_constraintTop_toBottomOf="@+id/bordeSup" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/bordeInf"/>
     <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_width="262dp"
+            android:layout_height="3dp"
             android:background="#F7F7F2"
             android:layout_below="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            tools:layout_editor_absoluteY="90dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="80dp"
-            android:layout_marginStart="80dp" app:layout_constraintHorizontal_bias="1.0" android:id="@+id/bordeInf"/>
+            android:id="@+id/bordeInf"
+            app:layout_constraintTop_toBottomOf="@+id/bordeSup" android:layout_marginBottom="52dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textVEmail"
+            app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="E-mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textVEmail"
-            android:layout_marginBottom="3dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_15" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="86dp" android:layout_marginEnd="301dp"
-            app:layout_constraintEnd_toEndOf="parent" android:textColor="#F7F7F2" android:textSize="21sp"
-            android:layout_marginTop="55dp" app:layout_constraintTop_toBottomOf="@+id/tVContacto"/>
+            android:textColor="#F7F7F2" android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bordeInf"
+            android:layout_marginBottom="61dp" app:layout_constraintBottom_toTopOf="@+id/textVAsunto"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.2"/>
     <TextView
             android:text="Asunto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textVAsunto"
-            android:layout_marginEnd="296dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="86dp"
-            android:textColor="#F7F7F2" android:textSize="21sp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/input_15" android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/input_16"/>
+            android:textColor="#F7F7F2" android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textVEmail"
+            android:layout_marginBottom="3dp" app:layout_constraintBottom_toTopOf="@+id/editAsunto"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.205"/>
     <TextView
             android:text="Mensaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textVMensaje"
             android:textSize="21sp" android:textColor="#F7F7F2"
-            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/input_16"
-            app:layout_constraintBottom_toTopOf="@+id/input_17" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="86dp" android:layout_marginBottom="2dp" android:layout_marginEnd="288dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="75dp" app:layout_constraintTop_toBottomOf="@+id/editAsunto"
+            android:layout_marginBottom="2dp" app:layout_constraintBottom_toTopOf="@+id/editMensaje"/>
     <Button
             android:id="@+id/botonEnv"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
-            android:background="#D3FDFBFB"
+            android:backgroundTint="#3C3A3A"
             android:text="ENVIAR"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/input_17" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:onClick="enviar"/>
+            android:onClick="enviar" android:textColor="#C8C1C1"
+            app:cornerRadius="0sp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/editMensaje" android:layout_marginBottom="21dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="10dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
