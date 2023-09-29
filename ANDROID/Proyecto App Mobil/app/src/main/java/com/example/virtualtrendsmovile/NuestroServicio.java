@@ -21,16 +21,19 @@ public class NuestroServicio extends AppCompatActivity {
 
     private Button playPauseButton;
 
+    private Button stopButton;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuestro_servicio);
+
         videoView=findViewById(R.id.videoView);
         videoViewLand = findViewById(R.id.videoViewLand);
-
         playPauseButton = findViewById(R.id.playPauseButton);
+        stopButton = findViewById(R.id.stopButton);
 
         try {
             videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/"+R.raw.body_scanner_3d_1));
@@ -50,6 +53,13 @@ public class NuestroServicio extends AppCompatActivity {
                 } else {
                     videoView.start();
                 }
+            }
+        });
+
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView.stopPlayback();
             }
         });
 
