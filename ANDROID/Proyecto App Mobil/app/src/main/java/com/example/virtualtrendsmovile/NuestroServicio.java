@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,9 @@ public class NuestroServicio extends AppCompatActivity {
     private VideoView videoView;
     private VideoView videoViewLand;
 
+    private Button playPauseButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -25,6 +29,8 @@ public class NuestroServicio extends AppCompatActivity {
         setContentView(R.layout.activity_nuestro_servicio);
         videoView=findViewById(R.id.videoView);
         videoViewLand = findViewById(R.id.videoViewLand);
+
+        playPauseButton = findViewById(R.id.playPauseButton);
 
         try {
             videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/"+R.raw.body_scanner_3d_1));
@@ -35,6 +41,18 @@ public class NuestroServicio extends AppCompatActivity {
 
         //videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/raw"+R.raw.body_scanner_3d_1)); /*identificador del video R.raw va a la carpeta*/
         //videoView.start();
+
+        playPauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (videoView.isPlaying()) {
+                    videoView.pause();
+                } else {
+                    videoView.start();
+                }
+            }
+        });
+
 
     }
 
