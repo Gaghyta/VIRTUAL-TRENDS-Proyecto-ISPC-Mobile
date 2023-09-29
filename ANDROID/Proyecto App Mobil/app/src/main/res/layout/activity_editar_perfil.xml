@@ -59,6 +59,8 @@
         android:id="@+id/editTextNumber"
         android:layout_width="228dp"
         android:layout_height="41dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="number"
@@ -70,6 +72,8 @@
         android:id="@+id/editTextText3"
         android:layout_width="228dp"
         android:layout_height="41dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="text"
@@ -142,6 +146,8 @@
         android:id="@+id/editTextTextPassword3"
         android:layout_width="228dp"
         android:layout_height="41dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPassword"
@@ -153,9 +159,8 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@+id/Frame"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -167,10 +172,22 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="83dp"
         android:background="#D3FDFBFB"
+        android:fontFamily="@font/archivo_regular"
         android:text="ENVIAR"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavEditar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#3B3D40"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_selector" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
