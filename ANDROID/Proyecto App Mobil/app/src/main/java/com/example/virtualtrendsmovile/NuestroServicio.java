@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,6 @@ public class NuestroServicio extends AppCompatActivity {
     //private static final String VIDEO_SAMPLE = "body_scanner_3d_1";
 
     private VideoView videoView;
-
 
 
     @Override
@@ -42,17 +42,19 @@ public class NuestroServicio extends AppCompatActivity {
 
         // Verifica la orientación del dispositivo
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            Log.d("MyApp", "Orientación: Horizontal");
+
             videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
                     ConstraintLayout.LayoutParams.MATCH_PARENT,
                     ConstraintLayout.LayoutParams.MATCH_PARENT
             ));
+            Log.d("MyApp", "Orientación: Horizontal");
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Log.d("MyApp", "Orientación: Vertical");
+
             videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
                     ConstraintLayout.LayoutParams.MATCH_PARENT,
                     ConstraintLayout.LayoutParams.WRAP_CONTENT
             ));
+            Log.d("MyApp", "Orientación: Vertical");
         }
     }
 
