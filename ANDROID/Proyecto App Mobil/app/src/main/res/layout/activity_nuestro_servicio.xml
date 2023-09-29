@@ -157,9 +157,10 @@
 
     <TextView
         android:id="@+id/nuestroServicio"
-        android:layout_width="259dp"
+        android:layout_width="221dp"
         android:layout_height="46dp"
         android:layout_marginBottom="144dp"
+        android:fontFamily="@font/josefin_sans"
         android:gravity="center_vertical"
         android:text="NUESTRO SERVICIO"
         android:textColor="#F7F7F2"
@@ -169,5 +170,38 @@
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/bodyScanIntro"
+        android:layout_width="220dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="70dp"
+        android:ems="10"
+        android:fontFamily="@font/archivo_regular"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="#F7F7F2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/nuestroServicio"
+        tools:text="Para saber en qué consiste nuestro: body scan  " />
+
+    <EditText
+        android:id="@+id/invitacion2"
+        android:layout_width="219dp"
+        android:layout_height="93dp"
+        android:ems="10"
+        android:fontFamily="@font/archivo_regular"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="¡los invitamos a ver el siguiente video en donde podrán ver nuestro escáner corporal en plena acción!"
+        android:textColor="#CC8F9BED"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyScanIntro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
