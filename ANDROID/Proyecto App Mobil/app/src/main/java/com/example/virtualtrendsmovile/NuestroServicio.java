@@ -8,7 +8,8 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class NuestroServicio extends AppCompatActivity {
-    //private static final String VIDEO_SAMPLE = "video_woman_scan";
+
+    //private static final String VIDEO_SAMPLE = "body_scanner_3d_1";
 
     private VideoView videoView;
 
@@ -19,7 +20,6 @@ public class NuestroServicio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuestro_servicio);
         videoView=findViewById(R.id.videoView);
-
         videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/raw"+R.raw.body_scanner_3d_1)); //identificador del video R.raw va a la carpeta
 
         videoView.start();
