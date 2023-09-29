@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoblanco"
     tools:context=".RegisterActivity">
+
     <FrameLayout
         android:id="@+id/Frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="413dp"
+        android:layout_height="733dp"
         android:layout_marginEnd="6dp"
         android:background="#CC191B1D"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
