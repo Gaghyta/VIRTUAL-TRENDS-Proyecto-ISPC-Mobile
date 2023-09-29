@@ -8,21 +8,29 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class NuestroServicio extends AppCompatActivity {
-    private static final String VIDEO_SAMPLE = "video_woman_scan";
+    //private static final String VIDEO_SAMPLE = "video_woman_scan";
 
     private VideoView videoView;
 
-    private Uri getMedia(String mediaName){
-        return Uri.parse("android.resource://"+getPackageName()+"/raw"+mediaName);
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuestro_servicio);
+        videoView=findViewById(R.id.videoView);
+
+        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/raw"+R.raw.body_scanner_3d_1)); //identificador del video R.raw va a la carpeta
+
+        videoView.start();
     }
 
-    private void initializePlayer(){
+
+    /*private Uri getMedia(String mediaName){
+        return Uri.parse("android.resource://"+getPackageName()+"/raw"+mediaName);
+    }*/
+
+    /*private void initializePlayer(){
         Uri videoUri = getMedia(VIDEO_SAMPLE);
         videoView.setVideoURI(videoUri);
         videoView.start();
@@ -50,7 +58,7 @@ public class NuestroServicio extends AppCompatActivity {
         if(Build.VERSION.SDK_INT>Build.VERSION_CODES.N){
             videoView.pause();
         }
-    }
+    }*/
 
 
 
