@@ -8,7 +8,6 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class NuestroServicio extends AppCompatActivity {
-
     private static final String VIDEO_SAMPLE = "video_woman_scan";
 
     private VideoView videoView;
@@ -27,7 +26,6 @@ public class NuestroServicio extends AppCompatActivity {
         Uri videoUri = getMedia(VIDEO_SAMPLE);
         videoView.setVideoURI(videoUri);
         videoView.start();
-
     }
 
     private void releasePlayer(){
@@ -52,7 +50,6 @@ public class NuestroServicio extends AppCompatActivity {
         if(Build.VERSION.SDK_INT>Build.VERSION_CODES.N){
             videoView.pause();
         }
-
     }
 
 
