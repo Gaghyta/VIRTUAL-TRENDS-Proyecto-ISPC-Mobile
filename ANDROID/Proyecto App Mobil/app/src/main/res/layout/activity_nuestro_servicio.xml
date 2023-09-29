@@ -223,8 +223,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
         android:layout_marginEnd="0dp"
-        android:textColorLink="#000000"
         android:text="Stop"
+        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
@@ -232,16 +232,14 @@
 
     <SeekBar
         android:id="@+id/volumeSeekBar"
-        android:layout_width="120dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="479dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="265dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.Guideline
