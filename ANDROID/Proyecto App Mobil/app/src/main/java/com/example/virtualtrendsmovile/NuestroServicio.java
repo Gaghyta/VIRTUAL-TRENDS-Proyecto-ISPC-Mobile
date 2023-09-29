@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ public class NuestroServicio extends AppCompatActivity {
     //private static final String VIDEO_SAMPLE = "body_scanner_3d_1";
 
     private VideoView videoView;
+    private VideoView videoViewLand;
 
 
     @Override
@@ -22,6 +24,7 @@ public class NuestroServicio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuestro_servicio);
         videoView=findViewById(R.id.videoView);
+        videoViewLand = findViewById(R.id.videoViewLand);
 
         try {
             videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/"+R.raw.body_scanner_3d_1));
@@ -35,7 +38,7 @@ public class NuestroServicio extends AppCompatActivity {
 
     }
 
-
+    /*
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -56,7 +59,36 @@ public class NuestroServicio extends AppCompatActivity {
             ));
             Log.d("MyApp", "Orientación: Vertical");
         }
+    }*/
+
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Verifica la orientación del dispositivo
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Orientación horizontal
+            videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
+                    ConstraintLayout.LayoutParams.MATCH_PARENT,
+                    ConstraintLayout.LayoutParams.MATCH_PARENT
+            ));
+            videoView.setVisibility(View.GONE); // Oculta el videoView vertical
+            videoViewLand.setVisibility(View.VISIBLE); // Muestra el videoView horizontal
+            Log.d("MyApp", "Orientación: Horizontal");
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            // Orientación vertical
+            videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
+                    ConstraintLayout.LayoutParams.MATCH_PARENT,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+            ));
+            videoView.setVisibility(View.VISIBLE); // Muestra el videoView vertical
+            videoViewLand.setVisibility(View.GONE); // Oculta el videoView horizontal
+            Log.d("MyApp", "Orientación: Vertical");
+        }
     }
+
 
     /*private Uri getMedia(String mediaName){
         return Uri.parse("android.resource://"+getPackageName()+"/raw"+mediaName);

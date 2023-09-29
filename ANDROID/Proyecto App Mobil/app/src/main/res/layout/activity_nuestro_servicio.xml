@@ -102,11 +102,22 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         />
 
+    <VideoView
+        android:id="@+id/videoViewLand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/isologotipoVirtualTrends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -116,14 +127,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/videoView" />
 
+    <View
+        android:id="@+id/lineaSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/nuestroServicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toBottomOf="@+id/nuestroServicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,NotSibling" />
+
     <TextView
         android:id="@+id/nuestroServicio"
         android:layout_width="259dp"
-        android:layout_height="52dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="144dp"
         android:text="NUESTROS SERVICIOS"
         android:textColor="#F7F7F2"
         android:textSize="23sp"
         android:textStyle="bold"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
