@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="@+id/frameLayout2"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
 
-        <VideoView
+       <!-- <VideoView
         android:id="@+id/videoView"
         android:layout_width="410dp"
         android:layout_height="252dp"
@@ -88,6 +88,20 @@
         app:layout_constraintHeight_default="wrap"
         app:layout_constraintDimensionRatio="H,16:9"
         android:visibility="visible" />
+     -->
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="412dp"
+        android:layout_height="260dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
 
 
 
