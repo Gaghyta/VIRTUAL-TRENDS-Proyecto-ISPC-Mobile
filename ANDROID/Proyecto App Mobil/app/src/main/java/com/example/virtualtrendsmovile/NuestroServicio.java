@@ -42,15 +42,13 @@ public class NuestroServicio extends AppCompatActivity {
 
         // Verifica la orientación del dispositivo
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // Orientación horizontal
-            // Aquí puedes realizar ajustes específicos para la orientación horizontal
+            Log.d("MyApp", "Orientación: Horizontal");
             videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
                     ConstraintLayout.LayoutParams.MATCH_PARENT,
                     ConstraintLayout.LayoutParams.MATCH_PARENT
             ));
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            // Orientación vertical
-            // Aquí puedes realizar ajustes específicos para la orientación vertical
+            Log.d("MyApp", "Orientación: Vertical");
             videoView.setLayoutParams(new ConstraintLayout.LayoutParams(
                     ConstraintLayout.LayoutParams.MATCH_PARENT,
                     ConstraintLayout.LayoutParams.WRAP_CONTENT
