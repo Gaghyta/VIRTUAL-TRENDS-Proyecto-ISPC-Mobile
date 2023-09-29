@@ -1,12 +1,15 @@
 package com.example.virtualtrendsmovile;
 
+import android.content.Context;
 import android.content.res.Configuration;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +26,8 @@ public class NuestroServicio extends AppCompatActivity {
 
     private Button stopButton;
 
+    private SeekBar volumeSeekBar;
+
 
 
     @Override
@@ -34,6 +39,7 @@ public class NuestroServicio extends AppCompatActivity {
         videoViewLand = findViewById(R.id.videoViewLand);
         playPauseButton = findViewById(R.id.playPauseButton);
         stopButton = findViewById(R.id.stopButton);
+        volumeSeekBar = findViewById(R.id.volumeSeekBar);
 
         try {
             videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/"+R.raw.body_scanner_3d_1));
@@ -63,6 +69,28 @@ public class NuestroServicio extends AppCompatActivity {
             }
         });
 
+        volumeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // Establecer el volumen del audio
+                AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+                int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                int volume = (int) (maxVolume * (progress / 100.0f));
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // Método requerido pero no utilizado en este ejemplo
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // Método requerido pero no utilizado en este ejemplo
+            }
+        });
+    }
+
 
     }
 
@@ -91,7 +119,7 @@ public class NuestroServicio extends AppCompatActivity {
 
 
 
-    @Override
+    /*@Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
@@ -115,7 +143,7 @@ public class NuestroServicio extends AppCompatActivity {
             videoViewLand.setVisibility(View.GONE); // Oculta el videoView horizontal
             Log.d("MyApp", "Orientación: Vertical");
         }
-    }
+    }*/
 
 
     /*private Uri getMedia(String mediaName){
@@ -150,8 +178,8 @@ public class NuestroServicio extends AppCompatActivity {
         if(Build.VERSION.SDK_INT>Build.VERSION_CODES.N){
             videoView.pause();
         }
-    }*/
+    }
 
 
 
-}
+}*/
