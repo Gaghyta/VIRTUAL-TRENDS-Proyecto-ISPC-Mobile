@@ -90,6 +90,7 @@
         android:layout_marginTop="220dp"
         android:text="Los invitamos a ver el siguiente video donde podrán ver nuestro escáner corporal en plena acción!"
         android:textColor="#CC8F9BED"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/videoLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,11 +190,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.82" />
+        app:layout_constraintTop_toBottomOf="@+id/stopButton" />
 
 
     <Button
@@ -201,6 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#575757"
+        android:shadowColor="#151414"
         android:text="Play/Pause"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -237,13 +238,6 @@
         app:layout_constraintVertical_bias="0.65999997" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="80dp" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -258,11 +252,5 @@
         app:menu="@menu/menu_selector">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
