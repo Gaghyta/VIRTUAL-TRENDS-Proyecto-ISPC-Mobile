@@ -3,7 +3,6 @@ package com.example.virtualtrendsmovile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+public class TurnosActivity extends AppCompatActivity {
 
-public class SelectorActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +39,4 @@ public class SelectorActivity extends AppCompatActivity {
             }
         });
     }
-    public void pantalla_turnos(View view){
-        Intent intent = new Intent(this, TurnosActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
 }
