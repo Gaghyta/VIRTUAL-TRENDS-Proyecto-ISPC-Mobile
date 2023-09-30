@@ -6,30 +6,15 @@
     android:layout_height="match_parent"
     tools:menu="@menu/menu_selector">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#3B3D40"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_selector">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/descripcion_imagen"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/fondoblanco" />
 
     <FrameLayout
@@ -38,11 +23,56 @@
         android:layout_height="845dp"
         android:background="#CC191B1D"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
+
+    <View
+        android:id="@+id/lineaSuperior"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.120000005"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.16000003"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <LinearLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="407dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintDimensionRatio="H,16:9" />
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -51,9 +81,8 @@
         android:background="#3B3D40"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -90,7 +119,8 @@
         android:visibility="visible" />
      -->
 
-    <VideoView
+    <!-- ULTIMA OPCION SIN LINEAR
+        <VideoView
         android:id="@+id/videoView"
         android:layout_width="413dp"
         android:layout_height="232dp"
@@ -99,9 +129,9 @@
         app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
         app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
 
-    <VideoView
+    <!-- <VideoView
         android:id="@+id/videoViewLand"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -110,136 +140,112 @@
         app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
         app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
 
     <ImageView
         android:id="@+id/isologotipoVirtualTrends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="251dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView" />
-
-    <View
-        android:id="@+id/lineaSuperior"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_above="@id/textView"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        android:background="#F7F7F2"
-        app:layout_constraintBottom_toTopOf="@+id/nuestroServicio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,NotSibling" />
-
-    <View
-        android:id="@+id/lineaInferior"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@id/textView"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        android:background="#F7F7F2"
-        app:layout_constraintBottom_toBottomOf="@+id/nuestroServicio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,NotSibling" />
+        app:layout_constraintTop_toBottomOf="@+id/bodyScanIntro" />
 
     <TextView
         android:id="@+id/nuestroServicio"
         android:layout_width="221dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="144dp"
         android:fontFamily="@font/josefin_sans"
         android:gravity="center_vertical"
         android:text="NUESTRO SERVICIO"
         android:textColor="#F7F7F2"
         android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/videoView"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.120000005" />
 
-    <EditText
-        android:id="@+id/bodyScanIntro"
-        android:layout_width="227dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="45dp"
+    <TextView
+        android:id="@+id/invitacion2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/archivo_regular"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="text"
+        android:maxLines="5"
+        android:text="¡los invitamos a ver el siguiente video en donde podrán ver nuestro escáner corporal en plena acción!"
+        android:textColor="#CC8F9BED"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/videoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyScanIntro" />
+
+    <TextView
+        android:id="@+id/bodyScanIntro"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:fontFamily="@font/archivo_regular"
+        android:gravity="start|top"
+        android:inputType="text"
         android:textAllCaps="false"
         android:textColor="#F7F7F2"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/invitacion2"
+        app:layout_constraintBottom_toTopOf="@+id/videoLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nuestroServicio"
         tools:text="Para saber en qué consiste nuestro: body scan  " />
-
-    <EditText
-        android:id="@+id/invitacion2"
-        android:layout_width="216dp"
-        android:layout_height="68dp"
-        android:ems="10"
-        android:fontFamily="@font/archivo_regular"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="¡los invitamos a ver el siguiente video en donde podrán ver nuestro escáner corporal en plena acción!"
-        android:textColor="#CC8F9BED"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/videoView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
         android:id="@+id/playPauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="180dp"
+        android:backgroundTint="#575757"
         android:text="Play/Pause"
         android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
 
 
     <Button
         android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="0dp"
+        android:backgroundTint="#575757"
         android:text="Stop"
         android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <SeekBar
         android:id="@+id/volumeSeekBar"
         android:layout_width="103dp"
         android:layout_height="21dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="265dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -248,5 +254,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="80dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#3B3D40"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu_selector">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

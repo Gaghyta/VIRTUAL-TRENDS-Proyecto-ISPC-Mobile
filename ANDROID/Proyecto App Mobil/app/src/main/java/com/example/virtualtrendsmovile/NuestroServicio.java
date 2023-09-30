@@ -20,7 +20,7 @@ public class NuestroServicio extends AppCompatActivity {
     //private static final String VIDEO_SAMPLE = "body_scanner_3d_1";
 
     private VideoView videoView;
-    private VideoView videoViewLand;
+    //private VideoView videoViewLand;
 
     private Button playPauseButton;
 
@@ -36,7 +36,7 @@ public class NuestroServicio extends AppCompatActivity {
         setContentView(R.layout.activity_nuestro_servicio);
 
         videoView=findViewById(R.id.videoView);
-        videoViewLand = findViewById(R.id.videoViewLand);
+        //videoViewLand = findViewById(R.id.videoViewLand);
         playPauseButton = findViewById(R.id.playPauseButton);
         stopButton = findViewById(R.id.stopButton);
         volumeSeekBar = findViewById(R.id.volumeSeekBar);
@@ -63,9 +63,12 @@ public class NuestroServicio extends AppCompatActivity {
         });
 
         stopButton.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                videoView.stopPlayback();
+                if (videoView.isPlaying()) {
+                    videoView.pause();
+                    videoView.seekTo(0);
+                    playPauseButton.setText("Play");
+                }
             }
         });
 
@@ -93,6 +96,22 @@ public class NuestroServicio extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*
     @Override
