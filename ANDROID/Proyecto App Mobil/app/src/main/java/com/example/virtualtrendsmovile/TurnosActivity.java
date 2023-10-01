@@ -32,9 +32,9 @@ public class TurnosActivity extends AppCompatActivity {
                 }else if (id== R.id.map){
 
                 } else if (id==R.id.turn) {
-                    startActivity(new Intent(getApplicationContext(), TurnosActivity.class));
+                    startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
-
+                    startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return false;
             }
