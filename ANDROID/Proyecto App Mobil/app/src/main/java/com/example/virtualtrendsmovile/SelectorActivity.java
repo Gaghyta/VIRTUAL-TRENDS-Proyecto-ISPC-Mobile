@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +22,20 @@ public class SelectorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selector);
-        //Funcionalidad de BottomNavigation
+
+
+        Button botonIrANuestroServicio = findViewById(R.id.botonIrANuestroServicio);
+
+        botonIrANuestroServicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Iniciar la actividad NuestroServicio cuando se haga clic en el botón.
+                Intent intent = new Intent(SelectorActivity.this, NuestroServicio.class);
+                startActivity(intent);
+            }
+        });
+
+
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -29,11 +43,11 @@ public class SelectorActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 if(id==R.id.back){
-                    
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 } else if (id==R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
                 }else if (id== R.id.map){
-                    
+                    startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), TurneroActivity.class));
                 } else if (id==R.id.logout) {
@@ -43,6 +57,8 @@ public class SelectorActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void pantalla_turnos(View view){
         Intent intent = new Intent(this, TurnosActivity.class);
         startActivity(intent);

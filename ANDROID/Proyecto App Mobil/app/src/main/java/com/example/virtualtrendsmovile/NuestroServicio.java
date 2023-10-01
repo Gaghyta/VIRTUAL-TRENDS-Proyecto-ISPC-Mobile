@@ -1,19 +1,25 @@
 package com.example.virtualtrendsmovile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class NuestroServicio extends AppCompatActivity {
 
@@ -99,7 +105,35 @@ public class NuestroServicio extends AppCompatActivity {
                 // Método requerido pero no utilizado en este ejemplo
             }
         });
+
+        BottomNavigationView nav = findViewById(R.id.bottomNavigationView);
+        nav.setSelected(true);
+        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if(id==R.id.back){
+                    startActivity(new Intent(getApplicationContext(), SelectorActivity.class));
+                } else if (id==R.id.info) {
+                    startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
+                }else if (id== R.id.map){
+                    startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
+                } else if (id==R.id.turn) {
+                    startActivity(new Intent(getApplicationContext(), TurneroActivity.class));
+                } else if (id==R.id.logout) {
+
+                }
+                return false;
+            }
+        });
+
+
+
     }
+
+
+
+
 
 
     }
