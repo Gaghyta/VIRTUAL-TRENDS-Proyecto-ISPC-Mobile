@@ -16,6 +16,9 @@
         android:theme="@style/Theme.VirtualTrendsMovile"
         tools:targetApi="31">
         <activity
+            android:name=".TurnosActivity"
+            android:exported="false" />
+        <activity
             android:name=".TurneroActivity"
             android:exported="false" />
         <activity
@@ -54,6 +57,9 @@
         </activity>
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
