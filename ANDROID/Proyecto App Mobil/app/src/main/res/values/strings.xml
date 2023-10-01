@@ -5,4 +5,5 @@
     <string name="login_title">INGRESÁ A TU CUENTA</string>
     <string name="email_title">email</string>
     <string name="password_title">password</string>
+    <string name="descripcion_imagen">Fondo gris con imagen de avatar caminando con bolso en mano, pantalón amplio, remera holgada y chaleco inflado.</string>
 </resources>
