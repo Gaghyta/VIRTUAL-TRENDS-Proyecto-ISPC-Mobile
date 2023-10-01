@@ -3,6 +3,7 @@ package com.example.virtualtrendsmovile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,4 +40,10 @@ public class TurnosActivity extends AppCompatActivity {
             }
         });
     }
+    public void ejecutar_turno(View view){
+        Intent intent = new Intent(this, TurneroActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

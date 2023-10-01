@@ -9,88 +9,93 @@
     tools:ignore="ExtraText">
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="412dp"
-        android:layout_height="197dp"
-        android:background="#D3AEACAC"
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        android:background="#D8939090"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp">
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="118dp"
-            android:layout_height="142dp"
-            android:layout_gravity="center_vertical"
-            android:gravity="center"
-            android:paddingLeft="30dp"
-            android:paddingBottom="20dp"
-            android:text="2"
-            android:textColor="#252424"
-            android:textSize="96sp"
-            android:textStyle="bold|italic" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="280dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:paddingEnd="0dp"
-            android:text="ELEGÍ TU FECHA"
+            android:layout_width="74dp"
+            android:layout_height="114dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/josefin_sans"
+            android:text="2"
             android:textAlignment="center"
-            android:textColor="#292727"
-            android:textSize="28sp"
-            android:textStyle="bold|italic" />
+            android:textColor="#B3191B1D"
+            android:textSize="96sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans"
+            android:text="ELEGÍ TU FECHA "
+            android:textAlignment="center"
+            android:textSize="24sp" />
     </FrameLayout>
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="326dp"
-        android:layout_height="258dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="280dp"
-        android:selectedWeekBackgroundColor="#131311"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavSelector"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#3B3D40"
+        app:itemIconTint="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="138dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginEnd="100dp"
-        android:background="@color/white"
-        android:text="Aceptar"
-        android:textColor="#0E0E0E"
-        android:textColorHighlight="@color/white"
-        android:textColorHint="@color/white"
-        android:textColorLink="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/menu_selector" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="24dp"
+        android:id="@+id/imageView6"
+        android:layout_width="129dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892"
+        app:srcCompat="@drawable/logo" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="353dp"
+        android:layout_height="295dp"
+        android:background="#817A7A"
+        android:backgroundTint="#AB686565"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.426" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="230dp"
+        android:layout_height="58dp"
+        android:background="#B3191B1D"
+        android:fontFamily="@font/josefin_sans"
+        android:text="ENVIAR"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
