@@ -133,6 +133,7 @@
         android:background="#D3FDFBFB"
         android:fontFamily="@font/archivo_regular"
         android:text="ENVIAR"
+        android:onClick="launchSelectorActivity"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
