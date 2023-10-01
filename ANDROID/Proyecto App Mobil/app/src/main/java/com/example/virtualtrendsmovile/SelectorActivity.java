@@ -36,7 +36,6 @@ public class SelectorActivity extends AppCompatActivity {
         });
 
 
-        //Funcionalidad de BottomNavigation
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -44,11 +43,11 @@ public class SelectorActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 if(id==R.id.back){
-                    
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 } else if (id==R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
                 }else if (id== R.id.map){
-                    
+                    startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), TurneroActivity.class));
                 } else if (id==R.id.logout) {
