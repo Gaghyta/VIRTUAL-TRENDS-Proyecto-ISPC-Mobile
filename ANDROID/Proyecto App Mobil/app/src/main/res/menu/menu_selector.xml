@@ -2,9 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/back"
-        android:title=""
-        android:icon="@drawable/back"
-        />
+        android:icon="@drawable/volver"
+        android:title="" />
     <item
         android:id="@+id/info"
         android:title=""
