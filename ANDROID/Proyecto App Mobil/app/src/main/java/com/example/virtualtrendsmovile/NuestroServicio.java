@@ -117,7 +117,7 @@ public class NuestroServicio extends AppCompatActivity {
                 } else if (id==R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
                 }else if (id== R.id.map){
-
+                    startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), TurneroActivity.class));
                 } else if (id==R.id.logout) {
