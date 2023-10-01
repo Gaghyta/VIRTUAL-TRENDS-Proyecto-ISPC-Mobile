@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="421dp"
+        android:layout_width="0dp"
         android:layout_height="173dp"
         android:background="#B3191B1D"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
 
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="408dp"
+        android:layout_width="0dp"
         android:layout_height="213dp"
         android:background="#CC191B1D"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,8 +65,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/siguiente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="271dp"
+        android:layout_height="64dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="20dp"
@@ -75,13 +75,13 @@
         android:onClick="ejecutar_turno"
         android:text="@string/elegi_fecha"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.882" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNavSelector"
@@ -102,6 +102,7 @@
         android:text="1"
         android:textAlignment="viewEnd"
         android:textSize="90sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
@@ -111,18 +112,19 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="161dp"
-        android:layout_height="68dp"
+        android:layout_width="175dp"
+        android:layout_height="81dp"
         android:fontFamily="@font/josefin_sans"
         android:text="INGRESÁ AL TURNERO"
         android:textAlignment="center"
+        android:textColor="#B3191B1D"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.403" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
