@@ -116,7 +116,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="83dp"
         android:text="nombre completo"
         android:textAlignment="textStart"
@@ -162,7 +162,8 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
