@@ -24,7 +24,7 @@ public class TurneroActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 if(id==R.id.back){
-
+                    startActivity(new Intent(getApplicationContext(), TurnosActivity.class));
                 } else if (id==R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
                 }else if (id== R.id.map){
@@ -40,7 +40,7 @@ public class TurneroActivity extends AppCompatActivity {
 
     }
     public void ejecutar_turno(View view){
-        Intent intent = new Intent(this, TurneroActivity.class);
+        Intent intent = new Intent(this, HorariosTurnosActivity.class);
         startActivity(intent);
         finish();
     }
