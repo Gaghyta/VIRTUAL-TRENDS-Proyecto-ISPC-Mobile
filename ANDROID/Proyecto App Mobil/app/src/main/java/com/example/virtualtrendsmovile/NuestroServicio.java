@@ -34,11 +34,14 @@ public class NuestroServicio extends AppCompatActivity {
 
     private SeekBar volumeSeekBar;
 
+    //private Class<?> actividadAnterior;
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -48,14 +51,14 @@ public class NuestroServicio extends AppCompatActivity {
 
         setContentView(R.layout.activity_nuestro_servicio);
 
-        videoView=findViewById(R.id.videoView);
+        videoView = findViewById(R.id.videoView);
         //videoViewLand = findViewById(R.id.videoViewLand);
         playPauseButton = findViewById(R.id.playPauseButton);
         stopButton = findViewById(R.id.stopButton);
         volumeSeekBar = findViewById(R.id.volumeSeekBar);
 
         try {
-            videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/"+R.raw.body_scanner_3d_1));
+            videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/" + R.raw.body_scanner_3d_1));
             videoView.start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -106,34 +109,46 @@ public class NuestroServicio extends AppCompatActivity {
             }
         });
 
+
+        //actividadAnterior = getClass();
         BottomNavigationView nav = findViewById(R.id.bottomNavigationView);
         nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if(id==R.id.back){
+                if (id == R.id.back) {
                     startActivity(new Intent(getApplicationContext(), SelectorActivity.class));
-                } else if (id==R.id.info) {
+
+                    // TODO prueba multi-flow
+                    /*if (actividadAnterior == NuestroServicio.class) {
+                        // Si la actividad anterior era InicioActivity, no hagas nada o toma alguna acción personalizada
+                    } else if (actividadAnterior == InicioActivity.class){
+                        startActivity(new Intent(getApplicationContext(), InicioActivity.class));
+                    }else if (actividadAnterior == DondeEstamosActivity.class) {
+                        startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
+                    }else if (actividadAnterior == TurnosActivity.class){
+                        startActivity(new Intent(getApplicationContext(), TurnosActivity.class));
+                    } else if (actividadAnterior == TurneroActivity.class) {
+                        startActivity(new Intent(getApplicationContext(), TurneroActivity.class));
+                    } else if (actividadAnterior == SelectorActivity.class) {
+                        startActivity(new Intent(getApplicationContext(), SelectorActivity.class));
+                    }*/
+
+                } else if (id == R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
-                }else if (id== R.id.map){
+                } else if (id == R.id.map) {
                     startActivity(new Intent(getApplicationContext(), DondeEstamosActivity.class));
-                } else if (id==R.id.turn) {
+                } else if (id == R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
-                } else if (id==R.id.logout) {
+                } else if (id == R.id.logout) {
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
-                return false;
+                return true;
             }
         });
 
-
-
     }
-
-
-
-
 
 
     }
