@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -37,5 +38,10 @@ public class TurneroActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void horario_turno(View view){
+        Intent intent = new Intent(this, TurneroActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
