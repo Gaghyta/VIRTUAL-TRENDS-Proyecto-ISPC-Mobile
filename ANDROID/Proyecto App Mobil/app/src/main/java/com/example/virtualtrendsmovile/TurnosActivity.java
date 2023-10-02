@@ -40,8 +40,11 @@ public class TurnosActivity extends AppCompatActivity {
             }
         });
 
-
-
+    }
+    public void ejecutar_turno(View view){
+        Intent intent = new Intent(this, TurneroActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 
