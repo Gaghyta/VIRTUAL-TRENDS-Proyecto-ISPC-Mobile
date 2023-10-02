@@ -7,6 +7,16 @@ La aplicación les ofrece la posibilidad  de obtener una sesión de 30 minutos p
 Es requisito tener una cuenta y los datos verificados, así como abonar previamente el costo del servicio. De esta forma únicamente es garantizada y confirmada la reserva del turno
 
 
+
+
+https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/5293ab35-2967-4fe9-8d81-cfafd595c43d
+
+
+
+
+
+
+
 ![HOME-APP](https://github.com/Gaghyta/VIRTUAL-TRENDS-Proyecto-ISPC-Mobile/assets/63260839/b071ecdf-a3a9-485c-bb76-b51476aca8b7)
 
 
