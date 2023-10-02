@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoblanco"
     tools:context=".RegisterActivity">
+
     <FrameLayout
         android:id="@+id/Frame"
         android:layout_width="match_parent"
@@ -25,11 +26,11 @@
         android:layout_width="263dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Frame"
         app:srcCompat="@drawable/barras" />
 
     <TextView
@@ -75,16 +76,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/archivo_regular"
         android:text="CREA TU CUENTA"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
 
     <TextView
@@ -92,7 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="78dp"
         android:fontFamily="@font/archivo_regular"
         android:text="nombre completo"
@@ -118,10 +119,13 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/btnNavRegister"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.94" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
@@ -133,6 +137,7 @@
         android:background="#D3FDFBFB"
         android:fontFamily="@font/archivo_regular"
         android:text="ENVIAR"
+        android:onClick="launchSelectorActivity"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -198,7 +203,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btnNavRegister"
+        android:id="@+id/btnNavSelector"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="#3B3D40"
