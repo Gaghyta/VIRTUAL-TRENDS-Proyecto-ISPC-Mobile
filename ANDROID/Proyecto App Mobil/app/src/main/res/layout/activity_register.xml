@@ -26,7 +26,7 @@
         android:layout_width="263dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Frame" />
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.94" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
