@@ -7,74 +7,54 @@ android:layout_height="match_parent"
 android:background="@drawable/fondo"
 tools:context=".HorariosTurnosActivity">
 
-<FrameLayout
-    android:id="@+id/frameLayout4"
-    android:layout_width="0dp"
-    android:layout_height="227dp"
-    android:background="#E2D6D9DC"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="45dp"
-        android:fontFamily="@font/josefin_sans"
-        android:text="3"
-        android:textAlignment="center"
-        android:textSize="96sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="236dp"
-        android:layout_height="95dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="17dp"
-        android:fontFamily="@font/josefin_sans"
-        android:text="Elegí una franja horaria"
-        android:textAlignment="center"
-        android:textColor="#B3191B1D"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-</FrameLayout>
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#B3191B1D"
+        android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
-        android:text="_9_00_a_11_00_a_m"
+
+        android:text="9:00 a 11:00 am"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
+        app:layout_constraintVertical_bias="0.0">
 
     </androidx.appcompat.widget.AppCompatButton>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="414dp"
+        android:layout_height="846dp"
+        android:background="#B3191B1D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#B3191B1D"
+        android:backgroundTint="#3B3D40"
         android:fontFamily="@font/josefin_sans"
-        android:text="11_00_a_14_00_p_m"
+        android:text="11:00 a 14:00 pm"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1">
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintVertical_bias="0.00999999">
 
     </androidx.appcompat.widget.AppCompatButton>
 
@@ -83,16 +63,18 @@ tools:context=".HorariosTurnosActivity">
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#B3191B1D"
+        android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
-        android:text="14_00_a_17_00_p_m"
+        android:text="14:00 a 17:00 pm"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.0">
 
     </androidx.appcompat.widget.AppCompatButton>
 
@@ -101,17 +83,19 @@ tools:context=".HorariosTurnosActivity">
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#B3191B1D"
+        android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
         android:foregroundTint="#B3191B1D"
-        android:text="17_00_a_20_00_p_m"
+        android:text="17:00 a 20:00 pm"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3">
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0">
 
     </androidx.appcompat.widget.AppCompatButton>
 
@@ -136,6 +120,45 @@ tools:context=".HorariosTurnosActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         app:srcCompat="@drawable/logo" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="0dp"
+        android:layout_height="227dp"
+        android:background="#D2F7F7F2"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/josefin_sans"
+            android:text="3"
+            android:textAlignment="center"
+            android:textSize="96sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="236dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/josefin_sans"
+            android:text="ELEGÍ UNA FRANJA HORARIA"
+            android:textAlignment="center"
+            android:textColor="#B3191B1D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
