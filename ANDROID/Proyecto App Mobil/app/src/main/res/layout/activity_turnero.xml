@@ -86,7 +86,7 @@
         android:layout_height="58dp"
         android:background="#B3191B1D"
         android:fontFamily="@font/josefin_sans"
-        android:onClick="horario_turno"
+        android:onClick="ejecutar_turno"
         android:text="ENVIAR"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
