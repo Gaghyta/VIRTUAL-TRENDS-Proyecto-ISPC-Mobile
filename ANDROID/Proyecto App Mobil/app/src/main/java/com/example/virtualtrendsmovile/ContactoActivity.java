@@ -40,10 +40,6 @@ public class ContactoActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
-
-
     }
 
     public void enviar(View view) {
