@@ -112,7 +112,7 @@ public class NuestroServicio extends AppCompatActivity {
 
         //actividadAnterior = getClass();
         BottomNavigationView nav = findViewById(R.id.bottomNavigationView);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.turn);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

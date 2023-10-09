@@ -20,7 +20,7 @@ public class InicioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.logout);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
