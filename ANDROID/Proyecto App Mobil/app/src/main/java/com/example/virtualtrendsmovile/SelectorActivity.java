@@ -36,7 +36,7 @@ public class SelectorActivity extends AppCompatActivity {
         });
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.back);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

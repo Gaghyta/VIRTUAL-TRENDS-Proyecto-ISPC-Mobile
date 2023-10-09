@@ -18,7 +18,7 @@ public class DondeEstamosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_donde_estamos);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.map);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

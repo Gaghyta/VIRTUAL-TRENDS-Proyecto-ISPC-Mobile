@@ -21,7 +21,7 @@ public class ContactoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contacto);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.info);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
