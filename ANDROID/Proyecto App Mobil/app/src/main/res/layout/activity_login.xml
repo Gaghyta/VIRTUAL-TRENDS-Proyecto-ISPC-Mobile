@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/etEmail"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/frameLayout" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/etPassword"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginBottom="330dp"
@@ -90,7 +90,7 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonAccept"
+        android:id="@+id/btnIngresar"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="64dp"
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
         android:id="@+id/textViewTitle"
