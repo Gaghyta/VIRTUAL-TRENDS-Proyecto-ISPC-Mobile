@@ -24,7 +24,7 @@ public class AdminSQLOpenHelper extends SQLiteOpenHelper {
         datosAdmin.put("password",password);
         db.insert("admin3","(usuario,password)",datosAdmin);
         db.execSQL("create table Personas(dni int primary key,nombres text,direccion text," +
-                "telefono text,correo text,password text)");
+                "correo text,password text)");
 
     }
 
@@ -32,13 +32,12 @@ public class AdminSQLOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists Personas");
     }
-    public boolean insertUser(int dni, String nombres, String direccion, String telefono, String correo, String password){
+    public boolean insertUser(int dni, String nombres, String direccion, String correo, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues datos = new ContentValues();
         datos.put("dni", dni);
         datos.put("nombres", nombres);
         datos.put("direccion", direccion);
-        datos.put("telefono", telefono);
         datos.put("correo", correo);
         datos.put("password", password);
 

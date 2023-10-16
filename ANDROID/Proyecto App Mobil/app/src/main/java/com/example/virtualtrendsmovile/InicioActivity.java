@@ -8,17 +8,25 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class InicioActivity extends AppCompatActivity {
-
+    Button inicio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+        inicio = findViewById(R.id.siguiente);
 
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+            }
+        });
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelectedItemId(R.id.logout);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

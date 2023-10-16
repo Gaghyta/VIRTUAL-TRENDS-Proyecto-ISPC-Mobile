@@ -165,7 +165,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/btn_reg_enviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"

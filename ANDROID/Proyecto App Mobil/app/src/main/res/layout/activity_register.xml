@@ -43,10 +43,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_nombres" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/et_reg_direccion"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -69,7 +69,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_dni" />
 
     <TextView
         android:id="@+id/txtTitle"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/et_reg_nombres"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -128,7 +128,7 @@
         app:layout_constraintVertical_bias="0.94" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/btn_reg_enviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
@@ -142,11 +142,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/Frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_password"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/et_reg_dni"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -166,10 +166,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_direccion" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/et_reg_email"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -189,10 +189,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_email" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/et_reg_password"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
