@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoblanco"
-    tools:context=".EditarPerfilActivity">
+    tools:context=".actividades.EditarPerfilActivity">
 
     <FrameLayout
         android:id="@+id/Frame"
@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/barras" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewTelefono"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
@@ -40,49 +40,58 @@
         android:text="número de teléfono"
         android:textColor="@color/white"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="228dp"
         android:layout_height="41dp"
+        android:layout_marginTop="175dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
+        android:layout_marginTop="306dp"
         android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Frame"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="228dp"
         android:layout_height="41dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginEnd="93dp"
+        android:layout_marginTop="150dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewDireccion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
@@ -90,9 +99,11 @@
         android:text="dirección"
         android:textColor="@color/white"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
+        app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
         android:id="@+id/txtTitle"
@@ -112,20 +123,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="83dp"
         android:text="nombre completo"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.18" />
 
 
     <TextView
@@ -137,9 +148,11 @@
         android:text="password"
         android:textColor="@color/white"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <EditText
@@ -151,9 +164,11 @@
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -162,10 +177,12 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Frame"
+        app:layout_constraintVertical_bias="0.95" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/Enviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
@@ -175,9 +192,11 @@
         android:fontFamily="@font/archivo_regular"
         android:text="ENVIAR"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
+        app:layout_constraintVertical_bias="0.24000001" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNavEditar"

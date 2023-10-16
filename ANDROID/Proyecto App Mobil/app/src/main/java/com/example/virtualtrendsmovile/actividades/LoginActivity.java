@@ -1,18 +1,16 @@
-package com.example.virtualtrendsmovile;
+package com.example.virtualtrendsmovile.actividades;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -29,12 +27,15 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnIngresar = (Button) findViewById(R.id.btnIngresar);
+
+
+        /*
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ingresar();
             }
-        });
+        });*/
 
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
@@ -63,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SelectorActivity.class);
         startActivity(intent);
     }
-
+    /*
     public void ingresar() {
         try {
             AdminSQLOpenHelper admin = new AdminSQLOpenHelper(this, "administracion", null, 1);
@@ -96,5 +97,5 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
+*/
 }

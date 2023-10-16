@@ -16,7 +16,7 @@
         android:theme="@style/Theme.VirtualTrendsMovile"
         tools:targetApi="31">
         <activity
-            android:name=".InicioActivity"
+            android:name=".actividades.InicioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,26 +25,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".actividades.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".NuestroServicio"
+            android:name=".actividades.NuestroServicio"
             android:exported="true"
             android:configChanges="orientation|screenSize">
         </activity>
-        <activity android:name=".DondeEstamosActivity">
+        <activity android:name=".actividades.DondeEstamosActivity">
         </activity>
         <activity
-            android:name=".EditarPerfilActivity"
+            android:name=".actividades.EditarPerfilActivity"
             android:exported="false" />
         <activity
-            android:name=".ContactoActivity"
+            android:name=".actividades.ContactoActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".actividades.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SelectorActivity"
+            android:name=".actividades.SelectorActivity"
             android:exported="true">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,26 +52,26 @@
             </intent-filter>-->
         </activity>
         <activity
-            android:name=".TurnosActivity"
+            android:name=".actividades.TurnosActivity"
             android:exported="false" />
         <activity
-            android:name=".TurneroActivity"
+            android:name=".actividades.TurneroActivity"
             android:exported="false" />
 
-        <activity android:name=".HorariosTurnosActivity">
+        <activity android:name=".actividades.HorariosTurnosActivity">
         </activity>
         <activity android:name=".AdminSQLOpenHelper">
         </activity>
 
-        <activity android:name=".pageUsuarios">
+        <activity android:name=".actividades.pageUsuarios">
         </activity>
 
-        <activity android:name=".ConfirmarDatosPersonales">
+        <activity android:name=".actividades.ConfirmarDatosPersonales">
         </activity>
 
-        <activity android:name=".ComprobacionReserva">
+        <activity android:name=".actividades.ComprobacionReserva">
         </activity>
-        <activity android:name=".ConfirmacionFinal">
+        <activity android:name=".actividades.ConfirmacionFinal">
         </activity>
 
 

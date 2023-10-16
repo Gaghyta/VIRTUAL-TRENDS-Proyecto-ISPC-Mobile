@@ -1,4 +1,4 @@
-package com.example.virtualtrendsmovile;
+package com.example.virtualtrendsmovile.actividades;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,25 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class EditarPerfilActivity extends AppCompatActivity {
-
-    @Override
+public class ConfirmarDatosPersonales extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_perfil);
-
-        BottomNavigationView nav = findViewById(R.id.btnNavEditar);
+        setContentView(R.layout.activity_confirmar_datos_personales);
+        BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
+
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 int id = item.getItemId();
                 if(id==R.id.back){
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HorariosTurnosActivity.class));
                 } else if (id==R.id.info) {
                     startActivity(new Intent(getApplicationContext(), ContactoActivity.class));
                 }else if (id== R.id.map){
@@ -34,10 +35,18 @@ public class EditarPerfilActivity extends AppCompatActivity {
                 } else if (id==R.id.logout) {
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
+
                 return false;
             }
+
         });
 
+    }
+
+    public void confirmar_datos(View view){
+        Intent intent = new Intent(this, ComprobacionReserva.class);
+        startActivity(intent);
+        finish();
     }
 
 }

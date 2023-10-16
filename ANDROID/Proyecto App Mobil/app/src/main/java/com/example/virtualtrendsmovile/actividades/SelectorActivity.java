@@ -1,27 +1,40 @@
-package com.example.virtualtrendsmovile;
-
-import android.content.Intent;
-import android.os.Bundle;
+package com.example.virtualtrendsmovile.actividades;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
+import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.snackbar.Snackbar;
 
-public class ContactoActivity extends AppCompatActivity {
+
+public class SelectorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacto);
+        setContentView(R.layout.activity_selector);
+
+
+        Button botonIrANuestroServicio = findViewById(R.id.botonIrANuestroServicio);
+
+        botonIrANuestroServicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Iniciar la actividad NuestroServicio cuando se haga clic en el botón.
+                Intent intent = new Intent(SelectorActivity.this, NuestroServicio.class);
+                startActivity(intent);
+            }
+        });
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelectedItemId(R.id.info);
+        nav.setSelectedItemId(R.id.back);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -42,17 +55,11 @@ public class ContactoActivity extends AppCompatActivity {
         });
     }
 
-    public void enviar(View view) {
 
-        Snackbar.make(view, "Mensaje recibido", Snackbar.LENGTH_SHORT).show();
-
-        view.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(ContactoActivity.this, InicioActivity.class);
-                startActivity(intent);
-            }
-        }, 1500);
+    public void pantalla_turnos(View view){
+        Intent intent = new Intent(this, TurnosActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }
