@@ -1,24 +1,25 @@
-package com.example.virtualtrendsmovile;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.virtualtrendsmovile.actividades;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class TurneroActivity extends AppCompatActivity {
+public class DondeEstamosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_turnero);
+        setContentView(R.layout.activity_donde_estamos);
+
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.map);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -37,11 +38,6 @@ public class TurneroActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
 
-    }
-    public void ejecutar_turno(View view){
-        Intent intent = new Intent(this, HorariosTurnosActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }

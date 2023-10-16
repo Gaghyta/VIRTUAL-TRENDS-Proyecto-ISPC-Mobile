@@ -1,4 +1,4 @@
-package com.example.virtualtrendsmovile;
+package com.example.virtualtrendsmovile.actividades;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,37 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-
-public class SelectorActivity extends AppCompatActivity {
+public class EditarPerfilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selector);
+        setContentView(R.layout.activity_editar_perfil);
 
-
-        Button botonIrANuestroServicio = findViewById(R.id.botonIrANuestroServicio);
-
-        botonIrANuestroServicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Iniciar la actividad NuestroServicio cuando se haga clic en el botón.
-                Intent intent = new Intent(SelectorActivity.this, NuestroServicio.class);
-                startActivity(intent);
-            }
-        });
-
-        BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelectedItemId(R.id.back);
+        BottomNavigationView nav = findViewById(R.id.btnNavEditar);
+        nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,13 +38,7 @@ public class SelectorActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
 
-
-    public void pantalla_turnos(View view){
-        Intent intent = new Intent(this, TurnosActivity.class);
-        startActivity(intent);
-        finish();
     }
 
 }
