@@ -60,10 +60,10 @@
 
         <activity android:name=".HorariosTurnosActivity">
         </activity>
-        <activity android:name=".AdminSQLOpenHelper">
+        <activity android:name=".db.AdminSQLOpenHelper">
         </activity>
 
-        <activity android:name=".pageUsuarios">
+        <activity android:name=".model.pageUsuarios">
         </activity>
 
         <activity android:name=".ConfirmarDatosPersonales">

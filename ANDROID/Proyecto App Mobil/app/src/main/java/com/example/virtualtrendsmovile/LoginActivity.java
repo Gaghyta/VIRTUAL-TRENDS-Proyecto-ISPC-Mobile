@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.virtualtrendsmovile.db.AdminSQLOpenHelper;
+import com.example.virtualtrendsmovile.model.pageUsuarios;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -74,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                     + password + "'", null);
 
             if (fila.moveToFirst()) {
-                Intent i = new Intent(this,pageUsuarios.class);
+                Intent i = new Intent(this, pageUsuarios.class);
                 i.putExtra("cedula",usuario);
                 startActivity(i);
             }else {
