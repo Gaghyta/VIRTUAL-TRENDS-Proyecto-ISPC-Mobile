@@ -2,6 +2,7 @@ package com.example.virtualtrendsmovile.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -46,7 +47,20 @@ public class AdminSQLOpenHelper extends SQLiteOpenHelper {
             return false;
         }else{return true;}
     }
-
+    public boolean checkUser(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Personas where correo=?", new String[]{email});
+        if(cursor.getCount() > 0){
+            return true;
+        }else{return false;}
+    }
+    public boolean checkUserPassword(String usuario, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Personas where usuario=? and password=?", new String[]{usuario, password});
+        if(cursor.getCount() > 0){
+            return true;
+        }else{return false;}
+    }
 }
 
 
