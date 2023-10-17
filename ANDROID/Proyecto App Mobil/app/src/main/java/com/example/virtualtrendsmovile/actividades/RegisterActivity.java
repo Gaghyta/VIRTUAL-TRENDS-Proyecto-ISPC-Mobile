@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -90,18 +92,28 @@ public class RegisterActivity extends AppCompatActivity {
         values.put(DatabaseHelper.COLUMN_EMAIL, email);
         values.put(DatabaseHelper.COLUMN_PASSWORD, password);
 
-        long newRowId = db.insert(DatabaseHelper.TABLE_USERS, null, values);
-        if (newRowId != -1) {
-            // El método toast nos permite dar un mensaje de Éxito, en este caso: Usuario registrado con éxito
-            Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
-            // Aquí puedes iniciar la siguiente actividad o realizar otras acciones
-        } else {
-            // En esta opción hay un Error al insertar datos
-            Toast.makeText(this, "Error al registrar el usuario", Toast.LENGTH_SHORT).show();
+        DatabaseHelper base = new DatabaseHelper(this);
+
+        if (TextUtils.isEmpty(nombreCompleto) || TextUtils.isEmpty(dni) || TextUtils.isEmpty(direccion) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
+            return;
+        } else  {
+            boolean check = dbHelper.checkUser(email);
+                if (check == false) {
+                    long insert = db.insert(DatabaseHelper.TABLE_USERS, null, values);
+                    if (insert == -1) {
+                        Toast.makeText(getApplicationContext(), "Intenta nuevamente", Toast.LENGTH_SHORT).show();
+                    }//end ins
+                    else {
+                        Toast.makeText(getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), InicioActivity.class));
+                    }
+                } //end check
+                else {
+                    Toast.makeText(getApplicationContext(), "El usuario ya existe", Toast.LENGTH_SHORT).show();
+                }
+
         }
     }
-
-
-
 
 }

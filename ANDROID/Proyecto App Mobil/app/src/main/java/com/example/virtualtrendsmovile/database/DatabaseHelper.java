@@ -1,8 +1,12 @@
 package com.example.virtualtrendsmovile.database;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.virtualtrendsmovile.modelos.Usuario;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "virtual_db";
@@ -44,5 +48,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
+    }
+    public boolean checkUser(String email){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("select * from Usuarios where email=?",new String[]{email});
+        if(cursor.getCount()>0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
