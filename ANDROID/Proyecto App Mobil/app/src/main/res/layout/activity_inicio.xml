@@ -99,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="#575757"
+            android:background="#3B3D40"
             app:menu="@menu/menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 
