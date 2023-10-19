@@ -1,23 +1,22 @@
 package com.example.virtualtrendsmovile.actividades;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class DondeEstamosActivity extends AppCompatActivity {
+public class Administrar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donde_estamos);
-
+        setContentView(R.layout.activity_administrar);
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -40,5 +39,4 @@ public class DondeEstamosActivity extends AppCompatActivity {
         });
 
     }
-
 }

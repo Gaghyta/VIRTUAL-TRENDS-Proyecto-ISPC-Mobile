@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etext_Email"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -46,7 +46,7 @@
         app:menu="@menu/menu_selector" />
 
     <TextView
-        android:id="@+id/textViewPassword"
+        android:id="@+id/tvPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/frameLayout" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etext_Password"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginBottom="330dp"
@@ -71,11 +71,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
         app:layout_constraintVertical_bias="0.39" />
 
     <TextView
-        android:id="@+id/textViewEmail"
+        android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
@@ -90,7 +90,7 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnIniciar_sesion"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="64dp"
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etext_Password" />
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -113,7 +113,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
