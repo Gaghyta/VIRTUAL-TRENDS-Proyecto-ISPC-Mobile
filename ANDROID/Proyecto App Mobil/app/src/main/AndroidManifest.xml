@@ -16,6 +16,12 @@
         android:theme="@style/Theme.VirtualTrendsMovile"
         tools:targetApi="31">
         <activity
+            android:name=".actividades.Administrar"
+            android:exported="false" />
+        <activity
+            android:name=".modelos.Cuenta_admin"
+            android:exported="false" />
+        <activity
             android:name=".actividades.InicioActivity"
             android:exported="true">
             <intent-filter>
@@ -29,11 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".actividades.NuestroServicio"
-            android:exported="true"
-            android:configChanges="orientation|screenSize">
-        </activity>
-        <activity android:name=".actividades.DondeEstamosActivity">
-        </activity>
+            android:configChanges="orientation|screenSize"
+            android:exported="true" />
+        <activity android:name=".actividades.DondeEstamosActivity" />
         <activity
             android:name=".actividades.EditarPerfilActivity"
             android:exported="false" />
@@ -46,10 +50,13 @@
         <activity
             android:name=".actividades.SelectorActivity"
             android:exported="true">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".actividades.TurnosActivity"
@@ -57,26 +64,16 @@
         <activity
             android:name=".actividades.TurneroActivity"
             android:exported="false" />
+        <activity android:name=".actividades.HorariosTurnosActivity" />
+        <activity android:name=".AdminSQLOpenHelper" />
+        <activity android:name=".actividades.pageUsuarios" />
+        <activity android:name=".actividades.ConfirmarDatosPersonales" />
+        <activity android:name=".actividades.ComprobacionReserva" />
+        <activity android:name=".actividades.ConfirmacionFinal" />
 
-        <activity android:name=".actividades.HorariosTurnosActivity">
-        </activity>
-        <activity android:name=".AdminSQLOpenHelper">
-        </activity>
-
-        <activity android:name=".actividades.pageUsuarios">
-        </activity>
-
-        <activity android:name=".actividades.ConfirmarDatosPersonales">
-        </activity>
-
-        <activity android:name=".actividades.ComprobacionReserva">
-        </activity>
-        <activity android:name=".actividades.ConfirmacionFinal">
-        </activity>
-
-
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
-
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
