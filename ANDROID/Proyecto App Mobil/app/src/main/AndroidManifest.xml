@@ -16,6 +16,9 @@
         android:theme="@style/Theme.VirtualTrendsMovile"
         tools:targetApi="31">
         <activity
+            android:name=".actividades.admin.RegistroAdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".actividades.admin.Administrar"
             android:exported="false" />
         <activity
