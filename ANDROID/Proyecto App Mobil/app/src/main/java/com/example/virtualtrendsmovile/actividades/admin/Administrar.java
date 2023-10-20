@@ -1,4 +1,4 @@
-package com.example.virtualtrendsmovile.actividades;
+package com.example.virtualtrendsmovile.actividades.admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.actividades.ContactoActivity;
+import com.example.virtualtrendsmovile.actividades.DondeEstamosActivity;
+import com.example.virtualtrendsmovile.actividades.InicioActivity;
+import com.example.virtualtrendsmovile.actividades.NuestroServicio;
+import com.example.virtualtrendsmovile.actividades.TurnosActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
