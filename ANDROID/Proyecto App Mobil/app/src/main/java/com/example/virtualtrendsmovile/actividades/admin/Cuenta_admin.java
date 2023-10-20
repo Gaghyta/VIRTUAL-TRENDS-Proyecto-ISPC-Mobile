@@ -1,4 +1,4 @@
-package com.example.virtualtrendsmovile.modelos;
+package com.example.virtualtrendsmovile.actividades.admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
