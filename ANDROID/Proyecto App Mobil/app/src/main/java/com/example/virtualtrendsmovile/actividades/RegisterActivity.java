@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.modelos.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -98,8 +99,8 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
             return;
         } else  {
-            boolean check = dbHelper.checkUser(email);
-                if (check == false) {
+            Usuario check = dbHelper.checkUser(email);
+                if (check == null) {
                     long insert = db.insert(DatabaseHelper.TABLE_USERS, null, values);
                     if (insert == -1) {
                         Toast.makeText(getApplicationContext(), "Intenta nuevamente", Toast.LENGTH_SHORT).show();

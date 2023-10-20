@@ -49,13 +49,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
-    public boolean checkUser(String email){
-        SQLiteDatabase db=this.getReadableDatabase();
-        Cursor cursor=db.rawQuery("select * from Usuarios where email=?",new String[]{email});
-        if(cursor.getCount()>0){
+    public boolean login(String email, String password){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from Usuarios where email = ? and password=?", new String[]{email,password});
+        if (cursor.getCount()>0){
             return true;
         }else{
             return false;
         }
     }
+    public Usuario checkUser(String email){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("select * from Usuarios where email=?",new String[]{email});
+        if(cursor.getCount()>0){
+            Usuario u = new Usuario();
+            cursor.moveToFirst();
+            u.setIdUsuario(cursor.getString(0));
+            u.setNombreCompleto(cursor.getString(1));
+            u.setDni(cursor.getString(2));
+            u.setDireccion(cursor.getString(3));
+            u.setEmail(cursor.getString(4));
+            u.setPassword(cursor.getString(5));
+            return u;
+        }else{
+            return null;
+        }
+    }
+    public Usuario selectUser(String id){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("select * from Usuarios where id=?",new String[]{id});
+        if(cursor.getCount()>0){
+            Usuario u = new Usuario();
+            cursor.moveToFirst();
+            u.setIdUsuario(cursor.getString(0));
+            u.setNombreCompleto(cursor.getString(1));
+            u.setDni(cursor.getString(2));
+            u.setDireccion(cursor.getString(3));
+            u.setEmail(cursor.getString(4));
+            u.setPassword(cursor.getString(5));
+            return u;
+        }else{
+            return null;
+        }
+    }
+
 }
