@@ -1,5 +1,8 @@
 package com.example.virtualtrendsmovile.actividades;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
-    private Button btnIngresar;
+    private Button btnConfirmar;
 
 
     @Override
@@ -26,17 +30,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         etEmail = (EditText) findViewById(R.id.etext_Email);
         etPassword = (EditText) findViewById(R.id.etext_Password);
-        btnIngresar = (Button) findViewById(R.id.btnIniciar_sesion);
+        btnConfirmar = (Button) findViewById(R.id.btnIniciar_sesion);
 
 
-        /*
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
+        btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ingresar();
+                login();
             }
-        });*/
-
+        });
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
@@ -60,42 +62,42 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void launchSelectorActivity(View view) {
-        Intent intent = new Intent(this, SelectorActivity.class);
-        startActivity(intent);
-    }
-    /*
-    public void ingresar() {
+    final DatabaseHelper helper = new DatabaseHelper(this);
+
+    public void login(){
+
+        SQLiteDatabase db = helper.getReadableDatabase();
+
         try {
-            AdminSQLOpenHelper admin = new AdminSQLOpenHelper(this, "administracion", null, 1);
-            SQLiteDatabase bd = admin.getWritableDatabase();
-            String usuario = etEmail.getText().toString();
+
+            String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
-            Cursor fila = bd.rawQuery("Select usuario,password from admin3 where usuario='" + usuario + "' and password='"
+            Cursor fila = db.rawQuery("Select email,password from Usuarios where email='" + email + "' and password='"
                     + password + "'", null);
 
             if (fila.moveToFirst()) {
-                Intent i = new Intent(this,pageUsuarios.class);
-                i.putExtra("cedula",usuario);
+
+                Intent i = new Intent(this,SelectorActivity.class);
+                i.putExtra("email",email);
                 startActivity(i);
+
             }else {
-                Cursor fila2 = bd.rawQuery("Select cedula,nombres from personas where cedula='" + usuario + "' and nombres='"
-                        + password + "'", null);
-                if (fila2.moveToFirst()) {
-                    Intent i = new Intent(this, pageUsuarios.class);
-                    i.putExtra("cedula",usuario);
-                    startActivity(i);
-                } else {
-                    etPassword.setText("");
-                    Toast.makeText(this, "Usuario o contraseña incorrectos Intente de nuevo", Toast.LENGTH_LONG).
-                            show();
-                    bd.close();
-                }
-            }}catch(Exception e){
+
+                etPassword.setText("");
+                Toast.makeText(this, "Usuario o contraseña incorrectos Intente de nuevo", Toast.LENGTH_LONG).
+                        show();
+                db.close();
+            }
+        }catch(Exception e){
             Toast.makeText(this,"Error en database"+e.toString(),Toast.LENGTH_LONG).show();
         }
 
 
     }
-*/
+
+  /*  public void launchSelectorActivity(View view) {
+        Intent intent = new Intent(this, SelectorActivity.class);
+        startActivity(intent);
+    }*/
+
 }
