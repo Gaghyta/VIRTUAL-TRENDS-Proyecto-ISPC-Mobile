@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.258" />
 
     <EditText
-        android:id="@+id/eTemail"
+        android:id="@+id/et_admin_email"
         android:layout_width="298dp"
         android:layout_height="61dp"
         android:background="#FFFFFF"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.396" />
 
     <EditText
-        android:id="@+id/eTpassword"
+        android:id="@+id/et_admin_password"
         android:layout_width="298dp"
         android:layout_height="61dp"
         android:background="#FFFFFF"
@@ -81,8 +81,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.456" />
 
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/josefin_sans"
+        android:text="Codigo de Administrador"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_password" />
+
+    <EditText
+        android:id="@+id/et_admin_codigo"
+        android:layout_width="298dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton2"
+        android:id="@+id/bt_admin_login"
         android:layout_width="308dp"
         android:layout_height="75dp"
         android:fontFamily="@font/josefin_sans"
@@ -93,24 +120,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btnNavSelector"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#3B3D40"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/menu_selector" />
+        app:layout_constraintVertical_bias="0.732" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -122,7 +135,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintVertical_bias="0.955" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
