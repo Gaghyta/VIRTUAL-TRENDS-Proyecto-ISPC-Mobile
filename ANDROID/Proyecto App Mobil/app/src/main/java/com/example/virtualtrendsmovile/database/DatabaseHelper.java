@@ -22,6 +22,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DIRECCION = "direccion";
     public static final String COLUMN_EMAIL = "email";
     public static final String COLUMN_PASSWORD = "password";
+    public static final String COLUMN_USERTYPE = "usertype";
+    public static final String COLUMN_CODIGO_ADMIN = "codigo_admin";
 
 
     // Sentencia SQL para crear la tabla
@@ -32,7 +34,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_DNI + " TEXT, " +
                     COLUMN_DIRECCION + " TEXT, " +
                     COLUMN_EMAIL + " TEXT, " +
-                    COLUMN_PASSWORD + " TEXT " +
+                    COLUMN_PASSWORD + " TEXT, " +
+                    COLUMN_USERTYPE + " TEXT, " +
+                    COLUMN_CODIGO_ADMIN + " TEXT " +
                     ")";
 
     public DatabaseHelper(Context context) {
@@ -57,6 +61,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }else{
             return false;
         }
+    }
+    public boolean insertUser(Usuario user){
+        SQLiteDatabase db=this.getReadableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COLUMN_NOMBRE, user.getNombreCompleto());
+        contentValues.put(COLUMN_DNI, user.getDni());
+        contentValues.put(COLUMN_DIRECCION, user.getDireccion());
+        contentValues.put(COLUMN_EMAIL, user.getEmail());
+        contentValues.put(COLUMN_PASSWORD, user.getPassword());
+        contentValues.put(COLUMN_USERTYPE, user.getUserType());
+        contentValues.put(COLUMN_CODIGO_ADMIN, user.getCodigo_admin());
+        db.insert(TABLE_USERS, null, contentValues);
+        return true;
     }
     public Usuario checkUser(String email){
         SQLiteDatabase db=this.getReadableDatabase();
