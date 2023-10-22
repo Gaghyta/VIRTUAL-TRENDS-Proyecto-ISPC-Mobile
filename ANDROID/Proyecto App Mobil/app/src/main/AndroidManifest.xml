@@ -24,14 +24,17 @@
         <activity
             android:name=".actividades.admin.Cuenta_admin"
             android:exported="false" />
-        <activity
-            android:name=".actividades.InicioActivity"
-            android:exported="true">
+        <activity android:name=".actividades.admin.GetStartedActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".actividades.InicioActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".actividades.LoginActivity"
