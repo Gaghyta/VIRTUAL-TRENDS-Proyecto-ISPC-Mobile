@@ -45,7 +45,5 @@ public class SessionManager {
     public void logout(){
         editor.clear();
         editor.commit();
-        Intent intent = new Intent(context, GetStartedActivity.class);
-        context.startActivity(intent);
     }
 }
