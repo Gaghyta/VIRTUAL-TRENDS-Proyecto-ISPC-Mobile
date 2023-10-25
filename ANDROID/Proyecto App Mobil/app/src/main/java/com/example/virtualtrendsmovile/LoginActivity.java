@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -70,12 +71,19 @@ public class LoginActivity extends AppCompatActivity {
             SQLiteDatabase bd = admin.getWritableDatabase();
             String usuario = etEmail.getText().toString();
             String password = etPassword.getText().toString();
-            Cursor fila = bd.rawQuery("Select usuario,password from admin3 where usuario='" + usuario + "' and password='"
+            Cursor fila = bd.rawQuery("Select dni,usuario,password from admin3 where usuario='" + usuario + "' and password='"
                     + password + "'", null);
 
             if (fila.moveToFirst()) {
+
+                int columnIndex = fila.getColumnIndex("dni");
+                if (columnIndex != -1) {
+                    int dni = fila.getInt(columnIndex);
+                    guardarUsuarioId(dni);
+                }
                 Intent i = new Intent(this,pageUsuarios.class);
                 i.putExtra("cedula",usuario);
+
                 startActivity(i);
             }else {
                 Cursor fila2 = bd.rawQuery("Select cedula,nombres from personas where cedula='" + usuario + "' and nombres='"
@@ -95,6 +103,13 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void guardarUsuarioId(int dni) {
+        SharedPreferences sharedPreferences = getSharedPreferences("MiPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("dni", dni);
+        editor.apply();
     }
 
 }
