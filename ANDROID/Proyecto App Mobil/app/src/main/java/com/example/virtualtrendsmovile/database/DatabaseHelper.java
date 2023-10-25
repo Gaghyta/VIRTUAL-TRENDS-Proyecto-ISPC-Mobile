@@ -27,8 +27,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Tabla de Contacto
     public static final String TABLE_CONTACT = "Contacto";
+    public static final String COLUMN_ID_CONTACTO = "id_contacto";
     public static final String COLUMN_ASUNTO = "asunto";
     public static final String COLUMN_MENSAJE = "mensaje";
+    public static final String COLUMN_EMAIL_CONTACT = "email_contacto";
 
 
     // Sentencia SQL para crear la tabla
@@ -47,8 +49,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Sentencia SQL para crear la tabla de Contacto
     private static final String TABLE_CONTACT_CREATE =
             "CREATE TABLE " + TABLE_CONTACT + " (" +
-                    COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_EMAIL + " TEXT, " +
+                    COLUMN_ID_CONTACTO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    COLUMN_EMAIL_CONTACT + " TEXT, " +
                     COLUMN_ASUNTO + " TEXT, " +
                     COLUMN_MENSAJE + " TEXT" +
                     ")";
@@ -59,7 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLE_USERS); // Crear tabla Usuarios
+        db.execSQL(TABLE_CREATE); // Crear tabla Usuarios
         db.execSQL(TABLE_CONTACT_CREATE); // Crear tabla Mensajes
     }
 
@@ -69,6 +71,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACT);
         onCreate(db);
     }
+
+
     public boolean login(String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from Usuarios where email = ? and password=?", new String[]{email,password});
@@ -91,7 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_USERS, null, contentValues);
         return true;
     }
-    
+
     public Usuario checkUser(String email){
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cursor=db.rawQuery("select * from Usuarios where email=?",new String[]{email});
