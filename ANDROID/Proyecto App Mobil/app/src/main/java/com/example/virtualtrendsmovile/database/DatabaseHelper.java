@@ -25,6 +25,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_USERTYPE = "usertype";
     public static final String COLUMN_CODIGO_ADMIN = "codigo_admin";
 
+    // Tabla de Contacto
+    public static final String TABLE_CONTACT = "Contacto";
+    public static final String COLUMN_ASUNTO = "asunto";
+    public static final String COLUMN_MENSAJE = "mensaje";
+
 
     // Sentencia SQL para crear la tabla
     private static final String TABLE_CREATE =
@@ -39,18 +44,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_CODIGO_ADMIN + " TEXT " +
                     ")";
 
+    // Sentencia SQL para crear la tabla de Contacto
+    private static final String TABLE_CONTACT_CREATE =
+            "CREATE TABLE " + TABLE_CONTACT + " (" +
+                    COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    COLUMN_EMAIL + " TEXT, " +
+                    COLUMN_ASUNTO + " TEXT, " +
+                    COLUMN_MENSAJE + " TEXT" +
+                    ")";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLE_CREATE);
+        db.execSQL(TABLE_USERS); // Crear tabla Usuarios
+        db.execSQL(TABLE_CONTACT_CREATE); // Crear tabla Mensajes
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACT);
         onCreate(db);
     }
     public boolean login(String email, String password){
@@ -75,6 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_USERS, null, contentValues);
         return true;
     }
+    
     public Usuario checkUser(String email){
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cursor=db.rawQuery("select * from Usuarios where email=?",new String[]{email});
