@@ -16,6 +16,7 @@ import com.example.virtualtrendsmovile.modelos.Usuario;
 
 public class RegistroAdminActivity extends AppCompatActivity {
     Button register;
+
     EditText nombre, dni, direccion, email, password, codigo;
     private DatabaseHelper dbHelper;
     private final String TIPO_USUARIO = "admin";
@@ -57,7 +58,7 @@ public class RegistroAdminActivity extends AppCompatActivity {
                         }//end ins
                         else {
                             Toast.makeText(getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), Cuenta_admin.class));
+                            startActivity(new Intent(getApplicationContext(), CuentaAdmin.class));
                             finish();
                         }
                     } //end check
