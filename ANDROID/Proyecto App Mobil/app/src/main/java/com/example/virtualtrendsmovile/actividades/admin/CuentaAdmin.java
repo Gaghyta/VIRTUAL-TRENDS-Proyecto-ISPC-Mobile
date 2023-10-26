@@ -21,7 +21,7 @@ public class CuentaAdmin extends AppCompatActivity {
     private DatabaseHelper dbHelper;
     SessionManager sessionManager;
 
-    TextView txtAdminRegistro = findViewById(R.id.txt_admin_registro);
+    TextView txtAdminRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class CuentaAdmin extends AppCompatActivity {
         codigo = findViewById(R.id.et_admin_codigo);
         dbHelper = new DatabaseHelper(this);
         sessionManager = new SessionManager(getApplicationContext());
+        txtAdminRegistro = findViewById(R.id.txt_admin_registro);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
