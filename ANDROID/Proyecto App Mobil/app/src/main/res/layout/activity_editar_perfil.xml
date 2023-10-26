@@ -63,7 +63,7 @@
         android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Frame"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -178,6 +178,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_eliminar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="83dp"
+        android:background="#D3ED0000"
+        android:fontFamily="@font/archivo_regular"
+        android:text="ELIMINAR CUENTA"
+        android:textColor="#fff"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirmar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNavEditar"

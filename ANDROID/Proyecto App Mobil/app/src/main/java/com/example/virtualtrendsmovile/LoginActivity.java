@@ -69,10 +69,10 @@ public class LoginActivity extends AppCompatActivity {
         try {
             AdminSQLOpenHelper admin = new AdminSQLOpenHelper(this, "administracion", null, 1);
             SQLiteDatabase bd = admin.getWritableDatabase();
-            String usuario = etEmail.getText().toString();
+            String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
-            Cursor fila = bd.rawQuery("Select dni,usuario,password from admin3 where usuario='" + usuario + "' and password='"
-                    + password + "'", null);
+            Cursor fila = bd.rawQuery("Select dni, correo, password from Personas where correo='" + email + "' and password='" + password + "'", null);
+
 
             if (fila.moveToFirst()) {
 
@@ -81,24 +81,16 @@ public class LoginActivity extends AppCompatActivity {
                     int dni = fila.getInt(columnIndex);
                     guardarUsuarioId(dni);
                 }
-                Intent i = new Intent(this,pageUsuarios.class);
-                i.putExtra("cedula",usuario);
+                Intent i = new Intent(this, SelectorActivity.class);
 
                 startActivity(i);
-            }else {
-                Cursor fila2 = bd.rawQuery("Select cedula,nombres from personas where cedula='" + usuario + "' and nombres='"
-                        + password + "'", null);
-                if (fila2.moveToFirst()) {
-                    Intent i = new Intent(this, pageUsuarios.class);
-                    i.putExtra("cedula",usuario);
-                    startActivity(i);
-                } else {
-                    etPassword.setText("");
-                    Toast.makeText(this, "Usuario o contraseña incorrectos Intente de nuevo", Toast.LENGTH_LONG).
-                            show();
-                    bd.close();
-                }
-            }}catch(Exception e){
+            }  else {
+                Toast.makeText(this, "Usuario o contraseña incorrectos Intente de nuevo", Toast.LENGTH_LONG).
+                        show();
+                bd.close();
+            }
+
+          }catch(Exception e){
             Toast.makeText(this,"Error en database"+e.toString(),Toast.LENGTH_LONG).show();
         }
 
