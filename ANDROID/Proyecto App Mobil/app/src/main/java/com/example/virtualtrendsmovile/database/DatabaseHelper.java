@@ -155,6 +155,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     public boolean agregarTurno(Turno t){
         SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_FECHA, t.getFecha());
     }
 
 }
