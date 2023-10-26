@@ -29,7 +29,7 @@ public class TurneroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnero);
-        calendarView = findViewById(R.id.calendarView)
+        calendarView = findViewById(R.id.calendarView);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
@@ -71,6 +71,6 @@ public class TurneroActivity extends AppCompatActivity {
         db.close();
     }
 
-    }
+    
 
 }

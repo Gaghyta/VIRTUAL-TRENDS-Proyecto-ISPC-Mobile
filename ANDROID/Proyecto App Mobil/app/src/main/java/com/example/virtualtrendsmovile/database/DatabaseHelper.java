@@ -64,10 +64,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Sentencia SQL para crear la tabla de turnero
     private static final String TABLE_TURNERO_CREATE =
-            "CREATE TABLE" + TABLE_TURNERO + " (" +
+            "CREATE TABLE " + TABLE_TURNERO + " (" +
                     COLUMN_ID_CALENDARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_FECHA + " TEXT, " +
-                    COLUMN_HORA + " TEXT, " +
+                    COLUMN_HORA + " TEXT " +
                     ")";
 
     public DatabaseHelper(Context context) {
