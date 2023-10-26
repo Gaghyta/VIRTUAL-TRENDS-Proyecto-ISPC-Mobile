@@ -64,13 +64,18 @@ public class CuentaAdmin extends AppCompatActivity {
             }
         });*/
 
+        //NUEVO MÉTODO PARA ACCEDER A LA PANTALLA DE REGISTRO DESDE EL TEXTO "¿No tenés una cuenta? Registráte"
+        txtAdminRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Aquí puedes abrir la pantalla de registro de administradores
+                Intent intent = new Intent(CuentaAdmin.this, RegistroAdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-    }
-    public void onRegistroClick(View view) {
-        // Aquí puedes abrir la pantalla de registro de administradores
-        Intent intent = new Intent(this, RegistroAdminActivity.class);
-        startActivity(intent);
+
     }
 
 }
