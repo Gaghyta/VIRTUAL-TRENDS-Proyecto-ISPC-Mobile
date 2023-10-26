@@ -15,6 +15,8 @@ import android.widget.EditText;
 
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.modelos.Usuario;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -22,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
     private Button btnConfirmar;
+    SessionManager ss;
+    private DatabaseHelper dbHelper;
 
 
     @Override
@@ -31,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etext_Email);
         etPassword = (EditText) findViewById(R.id.etext_Password);
         btnConfirmar = (Button) findViewById(R.id.btnIniciar_sesion);
+        ss = new SessionManager(getApplicationContext());
+        dbHelper = new DatabaseHelper(getApplicationContext());
 
 
         btnConfirmar.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +84,8 @@ public class LoginActivity extends AppCompatActivity {
             if (fila.moveToFirst()) {
 
                 Intent i = new Intent(this,SelectorActivity.class);
+                Usuario u = dbHelper.checkUser(email);
+                ss.createSession(u.getIdUsuario(), u.getNombreCompleto(),u.getUserType());
                 i.putExtra("email",email);
                 startActivity(i);
 

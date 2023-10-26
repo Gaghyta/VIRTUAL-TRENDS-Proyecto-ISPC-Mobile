@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/et_turno_comprobante"
             android:layout_width="228dp"
             android:layout_height="41dp"
             android:background="@color/white"
