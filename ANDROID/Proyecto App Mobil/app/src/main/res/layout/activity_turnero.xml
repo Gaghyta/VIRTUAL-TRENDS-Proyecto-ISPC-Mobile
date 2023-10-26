@@ -84,7 +84,7 @@
         android:id="@+id/appCompatButton"
         android:layout_width="230dp"
         android:layout_height="58dp"
-        android:background="#B3191B1D"
+        android:background="#191B1D"
         android:fontFamily="@font/josefin_sans"
         android:onClick="ejecutarTurno"
         android:text="ENVIAR"
