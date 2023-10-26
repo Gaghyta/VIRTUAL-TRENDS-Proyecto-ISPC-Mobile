@@ -71,7 +71,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_TURNERO + " (" +
                     COLUMN_ID_CALENDARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_FECHA + " TEXT, " +
-                    COLUMN_HORA + " TEXT " +
+                    COLUMN_HORA + " TEXT, " +
+                    COLUMN_COMPROBANTE + " TEXT, " +
+                    COLUMN_IDUSUARIO + " TEXT " +
                     ")";
 
     public DatabaseHelper(Context context) {
@@ -150,6 +152,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }else{
             return null;
         }
+    }
+    public boolean agregarTurno(Turno t){
+        SQLiteDatabase db = this.getReadableDatabase();
     }
 
 }
