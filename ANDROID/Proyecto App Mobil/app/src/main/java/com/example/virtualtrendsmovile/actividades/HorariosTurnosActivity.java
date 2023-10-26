@@ -14,7 +14,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
     String fecha;
-
+    Button btMañana, btmediodia, bttarde, btNoche
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
