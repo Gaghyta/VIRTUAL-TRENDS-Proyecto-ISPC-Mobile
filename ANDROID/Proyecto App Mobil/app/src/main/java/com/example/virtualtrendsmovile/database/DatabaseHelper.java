@@ -157,6 +157,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_FECHA, t.getFecha());
+        contentValues.put(COLUMN_HORA, t.getFranjaHoraria());
+        contentValues.put(COLUMN_COMPROBANTE, t.getComprobante());
     }
 
 }
