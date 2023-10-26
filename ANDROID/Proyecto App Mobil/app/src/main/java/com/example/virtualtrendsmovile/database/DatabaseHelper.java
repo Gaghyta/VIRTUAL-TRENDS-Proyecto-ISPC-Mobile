@@ -159,6 +159,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COLUMN_FECHA, t.getFecha());
         contentValues.put(COLUMN_HORA, t.getFranjaHoraria());
         contentValues.put(COLUMN_COMPROBANTE, t.getComprobante());
+        contentValues.put(COLUMN_IDUSUARIO, t.getIdUsuario());
+        db.insert(TABLE_TURNERO, null, contentValues);
+        return true;
     }
 
 }
