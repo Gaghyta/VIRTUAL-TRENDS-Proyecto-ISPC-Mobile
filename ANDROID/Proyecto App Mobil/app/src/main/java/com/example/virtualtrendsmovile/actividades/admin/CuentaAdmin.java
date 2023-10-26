@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
@@ -19,6 +20,8 @@ public class CuentaAdmin extends AppCompatActivity {
     EditText email, password, codigo;
     private DatabaseHelper dbHelper;
     SessionManager sessionManager;
+
+    TextView txtAdminRegistro = findViewById(R.id.txt_admin_registro);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,13 @@ public class CuentaAdmin extends AppCompatActivity {
             }
         });*/
 
+
+
+    }
+    public void onRegistroClick(View view) {
+        // Aquí puedes abrir la pantalla de registro de administradores
+        Intent intent = new Intent(this, RegistroAdminActivity.class);
+        startActivity(intent);
     }
 
 }
