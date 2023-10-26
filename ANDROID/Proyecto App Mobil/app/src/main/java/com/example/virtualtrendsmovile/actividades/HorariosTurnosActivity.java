@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
+    String fecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
