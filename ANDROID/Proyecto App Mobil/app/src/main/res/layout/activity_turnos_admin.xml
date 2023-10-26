@@ -8,10 +8,35 @@
     tools:context=".modelos.Turnos_Admin">
 
 
+    <View
+        android:id="@+id/lineaSuperiorTurnos"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71000004"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior3"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/lineaSuperiorTurnos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,NotSibling" />
+
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="267dp"
-        android:layout_height="86dp"
+        android:layout_width="259dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/josefin_sans"
         android:text="TURNOS"
         android:textAlignment="center"
@@ -22,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <TextView
         android:id="@+id/textView19"
@@ -98,7 +123,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.623" />
-
 
 
     <ImageView

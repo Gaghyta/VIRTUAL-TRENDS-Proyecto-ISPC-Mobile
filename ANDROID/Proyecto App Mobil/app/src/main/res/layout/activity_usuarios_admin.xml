@@ -7,10 +7,35 @@
     android:background="#CC191B1D"
     tools:context=".modelos.Usuarios_Admin">
 
+    <View
+        android:id="@+id/lineaSuperiorUsuarios"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferiorUsuarios"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineaSuperiorUsuarios"
+        tools:ignore="MissingConstraints,NotSibling" />
+
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="267dp"
-        android:layout_height="86dp"
+        android:layout_width="272dp"
+        android:layout_height="44dp"
         android:fontFamily="@font/josefin_sans"
         android:text="USUARIOS"
         android:textAlignment="center"
@@ -19,9 +44,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <TextView
         android:id="@+id/textView22"
@@ -49,20 +75,20 @@
         app:menu="@menu/menu_selector" />
 
     <androidx.appcompat.widget.AppCompatButton
-       android:layout_width="173dp"
-       android:layout_height="65dp"
-       android:backgroundTint="#B3191B1D"
-       android:fontFamily="@font/josefin_sans"
-       android:text="MODIFICAR"
-       android:textAlignment="center"
-       android:textColor="#FFFFFF"
-       android:textSize="18dp"
-       android:textStyle="bold"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.724" />
+        android:layout_width="173dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#B3191B1D"
+        android:fontFamily="@font/josefin_sans"
+        android:text="MODIFICAR"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="56dp"
@@ -97,7 +123,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.623" />
-
 
 
     <ImageView
