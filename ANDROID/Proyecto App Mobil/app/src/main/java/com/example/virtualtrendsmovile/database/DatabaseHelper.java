@@ -6,7 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.virtualtrendsmovile.modelos.Turno;
 import com.example.virtualtrendsmovile.modelos.Usuario;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "virtual_db";
@@ -38,6 +40,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID_CALENDARIO ="id_calendario";
     public static final String COLUMN_FECHA = "fecha";
     public static final String COLUMN_HORA = "horario";
+    public static final String COLUMN_COMPROBANTE = "comprobante";
+    public static final String COLUMN_IDUSUARIO = "idUsuario";
 
 
     // Sentencia SQL para crear la tabla
