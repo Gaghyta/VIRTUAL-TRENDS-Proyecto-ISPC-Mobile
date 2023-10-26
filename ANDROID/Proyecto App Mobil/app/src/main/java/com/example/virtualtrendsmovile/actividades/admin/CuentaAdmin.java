@@ -16,7 +16,6 @@ import com.example.virtualtrendsmovile.util.SessionManager;
 
 public class CuentaAdmin extends AppCompatActivity {
     Button login;
-    Button reg;
     EditText email, password, codigo;
     private DatabaseHelper dbHelper;
     SessionManager sessionManager;
@@ -55,12 +54,12 @@ public class CuentaAdmin extends AppCompatActivity {
                 }
             }
         });
-        reg.setOnClickListener(new View.OnClickListener() {
+        /*reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CuentaAdmin.this, RegistroAdminActivity.class));
             }
-        });
+        });*/
 
     }
 
