@@ -71,8 +71,7 @@
             android:name=".actividades.TurneroActivity"
             android:exported="false" />
         <activity android:name=".actividades.HorariosTurnosActivity" />
-        <activity android:name=".AdminSQLOpenHelper" />
-        <activity android:name=".actividades.pageUsuarios" />
+        <!--<activity android:name=".AdminSQLOpenHelper" />-->
         <activity android:name=".actividades.ConfirmarDatosPersonales" />
         <activity android:name=".actividades.ComprobacionReserva" />
         <activity android:name=".actividades.ConfirmacionFinal" />
