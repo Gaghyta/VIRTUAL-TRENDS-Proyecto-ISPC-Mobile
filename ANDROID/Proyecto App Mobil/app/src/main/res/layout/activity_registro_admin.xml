@@ -7,6 +7,32 @@
     android:background="#CC191B1D"
     tools:context=".actividades.admin.RegistroAdminActivity">
 
+    <View
+        android:id="@+id/lineaSuperior"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,NotSibling" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
@@ -48,10 +74,10 @@
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="307dp"
-        android:layout_height="73dp"
+        android:layout_width="303dp"
+        android:layout_height="36dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/josefin_sans"
         android:text="REGISTRO ADMINISTRADOR"
@@ -95,11 +121,11 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_admin_regEnviar" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_admin_regEnviar"
@@ -122,9 +148,9 @@
         android:id="@+id/et_admin_regDni"
         android:layout_width="234dp"
         android:layout_height="41dp"
+        android:background="#F9F9F9"
         android:ems="10"
         android:inputType="number"
-        android:background="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -145,9 +171,9 @@
         android:id="@+id/et_admin_regEmail"
         android:layout_width="234dp"
         android:layout_height="41dp"
+        android:background="#F9F9F9"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:background="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -170,9 +196,9 @@
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:layout_marginEnd="93dp"
+        android:background="#F9F9F9"
         android:ems="10"
         android:inputType="textPassword"
-        android:background="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -190,7 +216,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_admin_regPassword" />
-        " />
+    " />
 
     <EditText
         android:id="@+id/et_admin_regCodigo"
