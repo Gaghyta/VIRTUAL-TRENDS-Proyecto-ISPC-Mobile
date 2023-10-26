@@ -12,7 +12,6 @@ import com.example.virtualtrendsmovile.actividades.InicioActivity;
 import com.example.virtualtrendsmovile.actividades.SelectorActivity;
 import com.example.virtualtrendsmovile.util.SessionManager;
 
-import java.nio.channels.Selector;
 import java.util.Objects;
 
 public class GetStartedActivity extends AppCompatActivity {
@@ -41,7 +40,7 @@ public class GetStartedActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Bienvenido a Virtual Trends!", Toast.LENGTH_SHORT).show();
         }
 
-        admin.setOnClickListener( v -> startActivity(new Intent(getApplicationContext(), Cuenta_admin.class)));
+        admin.setOnClickListener( v -> startActivity(new Intent(getApplicationContext(), CuentaAdmin.class)));
         cliente.setOnClickListener( v -> startActivity(new Intent(getApplicationContext(), InicioActivity.class)));
 
     }
