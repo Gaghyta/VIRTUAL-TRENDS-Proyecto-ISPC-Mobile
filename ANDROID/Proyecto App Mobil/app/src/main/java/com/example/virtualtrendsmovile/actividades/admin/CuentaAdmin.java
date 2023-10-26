@@ -1,30 +1,22 @@
 package com.example.virtualtrendsmovile.actividades.admin;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
-import com.example.virtualtrendsmovile.actividades.ComprobacionReserva;
-import com.example.virtualtrendsmovile.actividades.ContactoActivity;
-import com.example.virtualtrendsmovile.actividades.DondeEstamosActivity;
-import com.example.virtualtrendsmovile.actividades.InicioActivity;
-import com.example.virtualtrendsmovile.actividades.NuestroServicio;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.example.virtualtrendsmovile.modelos.Usuario;
 import com.example.virtualtrendsmovile.util.SessionManager;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
-public class Cuenta_admin extends AppCompatActivity {
-    Button login, reg;
+public class CuentaAdmin extends AppCompatActivity {
+    Button login;
+    Button reg;
     EditText email, password, codigo;
     private DatabaseHelper dbHelper;
     SessionManager sessionManager;
@@ -50,15 +42,15 @@ public class Cuenta_admin extends AppCompatActivity {
                 boolean log = dbHelper.login(em, pass);
                 Usuario user = dbHelper.checkUser(em);
                 if(!log){
-                    Toast.makeText(Cuenta_admin.this, "Cuenta no encontrada.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CuentaAdmin.this, "Cuenta no encontrada.", Toast.LENGTH_SHORT).show();
                 }else{
                     if(codigo.getText().toString().equals(user.getCodigo_admin())){
-                        Toast.makeText(Cuenta_admin.this, "Bienvenido " +user.getNombreCompleto() , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CuentaAdmin.this, "Bienvenido " +user.getNombreCompleto() , Toast.LENGTH_SHORT).show();
                         sessionManager.createSession(user.getIdUsuario(), user.getNombreCompleto(), user.getUserType());
                         startActivity(new Intent(getApplicationContext(), Administrar.class));
                         finish();
                     }else {
-                        Toast.makeText(Cuenta_admin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CuentaAdmin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -66,7 +58,7 @@ public class Cuenta_admin extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Cuenta_admin.this, RegistroAdminActivity.class));
+                startActivity(new Intent(CuentaAdmin.this, RegistroAdminActivity.class));
             }
         });
 
