@@ -32,6 +32,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_MENSAJE = "mensaje";
     public static final String COLUMN_EMAIL_CONTACT = "email_contacto";
 
+    // tabla de turnero
+
+    public static final String TABLE_TURNERO = "Calendario";
+    public static final String COLUMN_ID_CALENDARIO ="id_calendario";
+    public static final String COLUMN_FECHA = "fecha";
+    public static final String COLUMN_HORA = "horario";
+
 
     // Sentencia SQL para crear la tabla
     private static final String TABLE_CREATE =
@@ -55,6 +62,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_MENSAJE + " TEXT" +
                     ")";
 
+    // Sentencia SQL para crear la tabla de turnero
+    private static final String TABLE_TURNERO_CREATE =
+            "CREATE TABLE" + TABLE_TURNERO + " (" +
+                    COLUMN_ID_CALENDARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    COLUMN_FECHA + " TEXT, " +
+                    COLUMN_HORA + " TEXT, " +
+                    ")";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -63,12 +78,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_CREATE); // Crear tabla Usuarios
         db.execSQL(TABLE_CONTACT_CREATE); // Crear tabla Mensajes
+        db.execSQL(TABLE_TURNERO_CREATE); // Crear tabla Turnero
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACT);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_TURNERO );
         onCreate(db);
     }
 

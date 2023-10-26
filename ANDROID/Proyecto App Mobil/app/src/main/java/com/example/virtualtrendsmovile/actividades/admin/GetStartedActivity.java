@@ -45,4 +45,5 @@ public class GetStartedActivity extends AppCompatActivity {
         cliente.setOnClickListener( v -> startActivity(new Intent(getApplicationContext(), InicioActivity.class)));
 
     }
+    
 }
