@@ -22,7 +22,7 @@
             android:name=".actividades.admin.Administrar"
             android:exported="false" />
         <activity
-            android:name=".actividades.admin.Cuenta_admin"
+            android:name=".actividades.admin.CuentaAdmin"
             android:exported="false" />
         <activity android:name=".actividades.admin.GetStartedActivity"
             android:exported="true" >
