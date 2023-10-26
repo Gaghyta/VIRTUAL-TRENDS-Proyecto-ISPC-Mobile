@@ -1,38 +1,38 @@
 package com.example.virtualtrendsmovile.actividades;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CalendarView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.virtualtrendsmovile.R;
-import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class TurneroActivity extends AppCompatActivity {
 
     private CalendarView calendarView;
+    Calendar calendar;
+    String fechaTurno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnero);
+        //calendario
         calendarView = findViewById(R.id.calendarView);
+        calendar = Calendar.getInstance();
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelected(true);
+        nav.setSelectedItemId(R.id.back);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -52,9 +52,20 @@ public class TurneroActivity extends AppCompatActivity {
             }
         });
 
+        //calendario
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
+                calendar.set(year, month, day);
+                fechaTurno = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(calendar.getTime());
+                //Toast.makeText(TurneroActivity.this, fechaTurno, Toast.LENGTH_SHORT).show();
+                System.out.println(fechaTurno);
+            }
+        });
+
     }
     public void ejecutarTurno(View view){
-        long fechaSeleccionada = calendarView.getDate();
+        /*long fechaSeleccionada = calendarView.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD", Locale.getDefault());
         String fechaFormateada = sdf.format(new Date(fechaSeleccionada));
         DatabaseHelper dbHelper = new DatabaseHelper(this);
@@ -68,9 +79,11 @@ public class TurneroActivity extends AppCompatActivity {
             Toast.makeText(this, "Error al seleccionar fecha", Toast.LENGTH_SHORT).show();
         }
 
-        db.close();
+        db.close(); */
+        Intent intent = new Intent(getApplicationContext(), HorariosTurnosActivity.class);
+        intent.putExtra("fecha", fechaTurno);
+        startActivity(intent);
+        finish();
     }
-
-    
 
 }
