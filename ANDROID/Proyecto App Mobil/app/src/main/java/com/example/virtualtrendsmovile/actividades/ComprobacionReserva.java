@@ -19,6 +19,8 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class ComprobacionReserva extends AppCompatActivity {
     String fecha, horario, comprobante;
+    EditText etComprobante;
+    private DatabaseHelper dbHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprobacion_rerserva);
