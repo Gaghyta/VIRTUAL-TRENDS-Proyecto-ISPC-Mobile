@@ -82,15 +82,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textVMensaje" />
 
     <View
-            android:layout_width="0dp"
-            android:layout_height="3dp"
-            android:background="#F7F7F2"
-            android:layout_above="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            android:id="@+id/bordSup"
-            android:layout_marginTop="46dp"
-            app:layout_constraintTop_toBottomOf="@+id/barraSup" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="74dp" android:layout_marginEnd="74dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+        android:id="@+id/bordSup"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="74dp"
+        android:background="#F7F7F2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraSup"
+        tools:ignore="MissingConstraints,NotSibling" />
     <TextView
             android:text="CONTACTO"
             android:layout_width="263dp"
@@ -104,16 +107,21 @@
             app:layout_constraintBottom_toBottomOf="@+id/bordInf" android:layout_marginStart="74dp"
             android:layout_marginEnd="74dp" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.0"/>
+
     <View
-            android:layout_width="0dp"
-            android:layout_height="3dp"
-            android:background="#F7F7F2"
-            android:layout_below="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            android:id="@+id/bordInf"
-            app:layout_constraintTop_toBottomOf="@+id/barraSup" android:layout_marginBottom="44dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textVEmail"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="74dp" android:layout_marginEnd="74dp"/>
+        android:id="@+id/bordInf"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="44dp"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textVEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraSup"
+        tools:ignore="MissingConstraints,NotSibling" />
     <Button
             android:id="@+id/botonEnv"
             android:layout_width="0dp"
