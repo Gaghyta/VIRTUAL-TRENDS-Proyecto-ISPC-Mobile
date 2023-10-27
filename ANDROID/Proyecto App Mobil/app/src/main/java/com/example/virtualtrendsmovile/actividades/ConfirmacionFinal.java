@@ -14,6 +14,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class ConfirmacionFinal extends AppCompatActivity {
     String fecha, horario;
+    TextView tv;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion_final);
