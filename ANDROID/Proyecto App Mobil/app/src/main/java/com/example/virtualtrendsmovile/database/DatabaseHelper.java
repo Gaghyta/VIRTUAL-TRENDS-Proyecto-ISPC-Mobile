@@ -44,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_IDUSUARIO = "idUsuario";
 
 
-    // Sentencia SQL para crear la tabla
+    // Sentencia SQL para crear la tabla de Usuarios
     private static final String TABLE_CREATE =
             "CREATE TABLE " + TABLE_USERS + " (" +
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -153,6 +153,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return null;
         }
     }
+
+    public boolean updateUser( String userId, String nombre, String direccion, String correo, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues datos = new ContentValues();
+        datos.put("nombre", nombre);
+        datos.put("direccion", direccion);
+        datos.put("email", correo);
+        datos.put("password", password);
+
+
+        long result = db.update("Usuarios",datos,"id="+userId, null);
+        if(result ==1){
+            return true;
+        }else{return false;}
+    }
+
+    public boolean deleteUser( String userId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        long result = db.delete("Usuarios","id="+userId, null);
+        if(result ==1){
+            return true;
+        }else{return false;}
+    }
+
+
     public boolean agregarTurno(Turno t){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
