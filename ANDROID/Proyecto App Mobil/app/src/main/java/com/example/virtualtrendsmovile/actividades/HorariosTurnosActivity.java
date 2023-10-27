@@ -53,6 +53,8 @@ public class HorariosTurnosActivity extends AppCompatActivity {
 
     public void ejecutar_horario(View view){
         Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", btmediodia.getText().toString());
         startActivity(intent);
         finish();
     }
