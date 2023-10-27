@@ -60,6 +60,9 @@ public class ComprobacionReserva extends AppCompatActivity {
     }
     public void comprobacion_reserva(View view){
         Intent intent = new Intent(this, ConfirmacionFinal.class);
+        //guardar en bd el turno completo
+        SessionManager ss = new SessionManager(this);
+        String id = ss.getSessionDetails("key_session_id");
         startActivity(intent);
         finish();
     }
