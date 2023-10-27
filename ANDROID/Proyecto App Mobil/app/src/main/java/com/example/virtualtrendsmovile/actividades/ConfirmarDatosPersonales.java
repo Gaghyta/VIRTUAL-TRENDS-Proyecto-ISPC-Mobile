@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ConfirmarDatosPersonales extends AppCompatActivity {
+    String fecha, horario;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos_personales);
@@ -52,6 +53,11 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
         Intent intent = new Intent(this, ComprobacionReserva.class);
         intent.putExtra("fecha", fecha);
         intent.putExtra("horario", horario);
+        startActivity(intent);
+        finish();
+    }
+    public void ejecutar_modificar(View view){
+        Intent intent = new Intent(this, TurnosActivity.class);
         startActivity(intent);
         finish();
     }
