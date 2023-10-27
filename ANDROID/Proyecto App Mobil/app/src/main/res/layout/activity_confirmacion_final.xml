@@ -79,7 +79,7 @@
             android:id="@+id/tv_turno_mensaje"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#8DDC90"
+            android:background="#B3749A5B"
             android:gravity="center"
             android:text="TextView_FechaHoraTurno"
             android:textAlignment="center"
