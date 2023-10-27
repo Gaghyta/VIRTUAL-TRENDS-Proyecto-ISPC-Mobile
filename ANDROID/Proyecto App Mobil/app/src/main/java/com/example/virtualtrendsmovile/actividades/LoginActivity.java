@@ -1,42 +1,50 @@
-package com.example.virtualtrendsmovile;
+package com.example.virtualtrendsmovile.actividades;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.modelos.Usuario;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
-    private Button btnIngresar;
+    private Button btnConfirmar;
+    SessionManager ss;
+    private DatabaseHelper dbHelper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
-        btnIngresar = (Button) findViewById(R.id.btnIngresar);
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
+        etEmail = (EditText) findViewById(R.id.etext_Email);
+        etPassword = (EditText) findViewById(R.id.etext_Password);
+        btnConfirmar = (Button) findViewById(R.id.btnIniciar_sesion);
+        ss = new SessionManager(getApplicationContext());
+        dbHelper = new DatabaseHelper(getApplicationContext());
+
+
+        btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ingresar();
+                login();
             }
         });
-
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
@@ -60,48 +68,44 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void launchSelectorActivity(View view) {
-        Intent intent = new Intent(this, SelectorActivity.class);
-        startActivity(intent);
-    }
+    final DatabaseHelper helper = new DatabaseHelper(this);
 
-    public void ingresar() {
+    public void login(){
+
+        SQLiteDatabase db = helper.getReadableDatabase();
+
         try {
-            AdminSQLOpenHelper admin = new AdminSQLOpenHelper(this, "administracion", null, 1);
-            SQLiteDatabase bd = admin.getWritableDatabase();
+
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
-            Cursor fila = bd.rawQuery("Select dni, correo, password from Personas where correo='" + email + "' and password='" + password + "'", null);
-
+            Cursor fila = db.rawQuery("Select email,password from Usuarios where email='" + email + "' and password='"
+                    + password + "'", null);
 
             if (fila.moveToFirst()) {
 
-                int columnIndex = fila.getColumnIndex("dni");
-                if (columnIndex != -1) {
-                    int dni = fila.getInt(columnIndex);
-                    guardarUsuarioId(dni);
-                }
-                Intent i = new Intent(this, SelectorActivity.class);
-
+                Intent i = new Intent(this,SelectorActivity.class);
+                Usuario u = dbHelper.checkUser(email);
+                ss.createSession(u.getIdUsuario(), u.getNombreCompleto(),u.getUserType());
+                i.putExtra("email",email);
                 startActivity(i);
-            }  else {
+
+            }else {
+
+                etPassword.setText("");
                 Toast.makeText(this, "Usuario o contraseña incorrectos Intente de nuevo", Toast.LENGTH_LONG).
                         show();
-                bd.close();
+                db.close();
             }
-
-          }catch(Exception e){
+        }catch(Exception e){
             Toast.makeText(this,"Error en database"+e.toString(),Toast.LENGTH_LONG).show();
         }
 
 
     }
 
-    private void guardarUsuarioId(int dni) {
-        SharedPreferences sharedPreferences = getSharedPreferences("MiPref", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("dni", dni);
-        editor.apply();
-    }
+  /*  public void launchSelectorActivity(View view) {
+        Intent intent = new Intent(this, SelectorActivity.class);
+        startActivity(intent);
+    }*/
 
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".ComprobacionReserva">
+    tools:context=".actividades.ComprobacionReserva">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -49,7 +49,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/menu_selector" />
+        app:menu="@menu/menu_selector" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -75,37 +77,78 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <View
+            android:id="@+id/lineaSuperior6"
+            android:layout_width="410dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/textView"
+            android:background="#5B7A46"
+            app:layout_constraintBottom_toTopOf="@+id/tv_turno_mensaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <TextView
+            android:id="@+id/tv_turno_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#B3749A5B"
+            android:fontFamily="@font/josefin_sans"
+            android:gravity="center"
+            android:text="TextView_FechaHoraTurno"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/indicaciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <View
+            android:id="@+id/lineaInferior5"
+            android:layout_width="410dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/textView"
+            android:background="#5B7A46"
+            app:layout_constraintBottom_toTopOf="@+id/indicaciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_turno_mensaje"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,NotSibling" />
+
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="103dp"
             android:fontFamily="@font/josefin_sans"
             android:text="6"
             android:textAlignment="center"
             android:textSize="96sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/signoExclamación"
+            app:layout_constraintEnd_toStartOf="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.17000002" />
+            app:layout_constraintVertical_bias="0.36" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="231dp"
-            android:layout_height="60dp"
+            android:layout_width="145dp"
+            android:layout_height="32dp"
             android:fontFamily="@font/josefin_sans"
             android:text="¡TERMINASTE!"
             android:textAlignment="center"
             android:textColor="#B3191B1D"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/indicaciones"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26999998" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/signoExclamación"
@@ -115,10 +158,10 @@
             android:text="!"
             android:textColor="#D65E69"
             android:textSize="66sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/parrafo_explicativo"
+            app:layout_constraintEnd_toStartOf="@+id/indicaciones"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/indicaciones"
             app:layout_constraintVertical_bias="0.35000002" />
 
         <TextView
@@ -131,20 +174,16 @@
             android:textColorLink="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.84000003" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/indicaciones"
             android:layout_width="237dp"
             android:layout_height="99dp"
             android:text="RECORDÁ TRAER  UN CAMBIO DE ROPA QUE MARQUE EN DETALLE TODO TU CUERPO (Recomendamos ropa deportiva de lycra/spandex. Ninguna prenda puede ser holgada) ."
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/parrafo_explicativo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.65999997" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

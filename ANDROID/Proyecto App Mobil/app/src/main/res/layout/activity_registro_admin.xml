@@ -4,35 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoblanco"
-    tools:context=".actividades.RegisterActivity">
+    android:background="#CC191B1D"
+    tools:context=".actividades.admin.RegistroAdminActivity">
 
-    <FrameLayout
-        android:id="@+id/Frame"
-        android:layout_width="411dp"
-        android:layout_height="847dp"
-        android:layout_marginEnd="6dp"
-        android:background="#CC191B1D"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="263dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="64dp"
+    <View
+        android:id="@+id/lineaSuperior"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Frame"
-        app:srcCompat="@drawable/barras" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,NotSibling" />
 
     <TextView
         android:id="@+id/textView3"
@@ -44,10 +43,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNombreCompleto" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regNombre" />
 
     <EditText
-        android:id="@+id/editTextDireccion"
+        android:id="@+id/et_admin_regDireccion"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -71,41 +70,43 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDNI" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regDni" />
+
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="303dp"
+        android:layout_height="36dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/archivo_regular"
-        android:text="CREA TU CUENTA"
+        android:fontFamily="@font/josefin_sans"
+        android:text="REGISTRO ADMINISTRADOR"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="78dp"
         android:fontFamily="@font/archivo_regular"
         android:text="nombre completo"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <EditText
-        android:id="@+id/editTextNombreCompleto"
+        android:id="@+id/et_admin_regNombre"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -122,33 +123,31 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Frame" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_admin_regEnviar" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Enviar"
+        android:id="@+id/bt_admin_regEnviar"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="83dp"
         android:background="#D3FDFBFB"
         android:fontFamily="@font/archivo_regular"
         android:onClick="launchSelectorActivity"
         android:text="ENVIAR"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/Frame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regCodigo" />
 
     <EditText
-        android:id="@+id/editTextDNI"
+        android:id="@+id/et_admin_regDni"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:background="#F9F9F9"
@@ -169,10 +168,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDireccion" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regDireccion" />
 
     <EditText
-        android:id="@+id/editTextEmailAddress"
+        android:id="@+id/et_admin_regEmail"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:background="#F9F9F9"
@@ -193,10 +192,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regEmail" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/et_admin_regPassword"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -209,15 +208,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btnNavSelector"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#3B3D40"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/codigo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
+        android:fontFamily="@font/archivo_regular"
+        android:text="codigo"
+        android:textColor="@color/white"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_selector" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_regPassword" />
+    " />
+
+    <EditText
+        android:id="@+id/et_admin_regCodigo"
+        android:layout_width="234dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
+        android:background="#F9F9F9"
+        android:ems="10"
+        android:hint="Ingrese Codigo"
+
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

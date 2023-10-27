@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC191B1D"
-    tools:context=".SelectorActivity">
+    tools:context=".actividades.SelectorActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/barraSup"
@@ -21,7 +21,7 @@
     <View
         android:id="@+id/bordSup"
         android:layout_width="263dp"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
         android:layout_above="@id/textView"
         android:layout_marginStart="74dp"
         android:layout_marginEnd="74dp"
@@ -60,7 +60,7 @@
     <View
         android:id="@+id/bordInf"
         android:layout_width="263dp"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
         android:layout_below="@id/textView"
         android:background="#F7F7F2"
         app:layout_constraintBottom_toBottomOf="parent"

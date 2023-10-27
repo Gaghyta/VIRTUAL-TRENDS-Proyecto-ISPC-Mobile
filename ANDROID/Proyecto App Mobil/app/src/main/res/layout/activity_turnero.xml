@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".SelectorActivity"
+    tools:context=".actividades.SelectorActivity"
     tools:ignore="ExtraText">
 
     <FrameLayout
@@ -84,9 +84,9 @@
         android:id="@+id/appCompatButton"
         android:layout_width="230dp"
         android:layout_height="58dp"
-        android:background="#B3191B1D"
+        android:background="#191B1D"
         android:fontFamily="@font/josefin_sans"
-        android:onClick="ejecutar_turno"
+        android:onClick="ejecutarTurno"
         android:text="ENVIAR"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

@@ -5,7 +5,7 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
                                                    android:background="#CC191B1D"
-                                                   tools:context=".SelectorActivity">
+                                                   tools:context=".actividades.SelectorActivity">
 
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="0dp"
@@ -21,15 +21,20 @@
             app:layout_constraintStart_toStartOf="@+id/editEmail"
             android:layout_marginStart="3dp" app:layout_constraintTop_toBottomOf="@+id/bordInf"
             app:layout_constraintBottom_toTopOf="@+id/editEmail"/>
+
     <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="0dp"
-            android:layout_height="54dp"
-            android:background="#FFFFFF"
-            app:layout_constraintTop_toBottomOf="@+id/textVEmail" android:layout_marginBottom="536dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="68dp" android:layout_marginEnd="68dp"/>
+        android:id="@+id/editEmail"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="536dp"
+        android:background="#FFFFFF"
+        android:hint="Ingrese su email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVEmail" />
     <TextView
             android:text="Asunto"
             android:layout_width="wrap_content"
@@ -38,16 +43,21 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="71dp" app:layout_constraintTop_toBottomOf="@+id/editEmail"
             android:layout_marginBottom="3dp" app:layout_constraintBottom_toTopOf="@+id/editAsunto"/>
+
     <EditText
-            android:id="@+id/editAsunto"
-            android:layout_width="269dp"
-            android:layout_height="54dp"
-            android:background="#FFFFFF"
-            app:layout_constraintTop_toBottomOf="@+id/textVAsunto" android:layout_marginBottom="8dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textVMensaje"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="71dp" android:layout_marginEnd="71dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+        android:id="@+id/editAsunto"
+        android:layout_width="269dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:hint="Ingrese Asunto"
+        app:layout_constraintBottom_toTopOf="@+id/textVMensaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVAsunto" />
     <TextView
             android:text="Mensaje"
             android:layout_width="wrap_content"
@@ -56,26 +66,34 @@
             app:layout_constraintStart_toStartOf="@+id/editMensaje"
             android:layout_marginStart="3dp" app:layout_constraintTop_toBottomOf="@+id/editAsunto"
             android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/editMensaje"/>
+
     <EditText
-            android:id="@+id/editMensaje"
-            android:layout_width="268dp"
-            android:layout_height="100dp"
-            android:background="#FFFFFF"
-            app:layout_constraintTop_toBottomOf="@+id/textVMensaje" android:layout_marginBottom="22dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/botonEnv"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="71dp" android:layout_marginEnd="71dp"/>
+        android:id="@+id/editMensaje"
+        android:layout_width="268dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="22dp"
+        android:background="#FFFFFF"
+        android:hint="Ingrese su mensaje"
+        app:layout_constraintBottom_toTopOf="@+id/botonEnv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVMensaje" />
 
     <View
-            android:layout_width="0dp"
-            android:layout_height="3dp"
-            android:background="#F7F7F2"
-            android:layout_above="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            android:id="@+id/bordSup"
-            android:layout_marginTop="46dp"
-            app:layout_constraintTop_toBottomOf="@+id/barraSup" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="74dp" android:layout_marginEnd="74dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+        android:id="@+id/bordSup"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="74dp"
+        android:background="#F7F7F2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraSup"
+        tools:ignore="MissingConstraints,NotSibling" />
     <TextView
             android:text="CONTACTO"
             android:layout_width="263dp"
@@ -89,16 +107,21 @@
             app:layout_constraintBottom_toBottomOf="@+id/bordInf" android:layout_marginStart="74dp"
             android:layout_marginEnd="74dp" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.0"/>
+
     <View
-            android:layout_width="0dp"
-            android:layout_height="3dp"
-            android:background="#F7F7F2"
-            android:layout_below="@id/textView" tools:ignore="MissingConstraints,NotSibling"
-            android:id="@+id/bordInf"
-            app:layout_constraintTop_toBottomOf="@+id/barraSup" android:layout_marginBottom="44dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textVEmail"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="74dp" android:layout_marginEnd="74dp"/>
+        android:id="@+id/bordInf"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="44dp"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textVEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraSup"
+        tools:ignore="MissingConstraints,NotSibling" />
     <Button
             android:id="@+id/botonEnv"
             android:layout_width="0dp"

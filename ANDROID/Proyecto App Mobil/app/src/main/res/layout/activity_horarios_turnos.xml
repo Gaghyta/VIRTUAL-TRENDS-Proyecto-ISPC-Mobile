@@ -5,16 +5,16 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@drawable/fondo"
-tools:context=".HorariosTurnosActivity">
+tools:context=".actividades.HorariosTurnosActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button1"
+        android:id="@+id/bt_turno_mañana"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
-
+        android:onClick="ejecutar_horario_mañana"
         android:text="9:00 a 11:00 am"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -37,70 +37,70 @@ tools:context=".HorariosTurnosActivity">
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonHorarioElegido"
+        android:id="@+id/bt_turno_mediodia"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#3B3D40"
+        android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
-        android:text="11:00 a 14:00 pm"
         android:onClick="ejecutar_horario"
+        android:text="11:00 a 14:00 pm"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/bt_turno_mañana"
         app:layout_constraintVertical_bias="0.00999999">
 
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonModificar"
+        android:id="@+id/bt_turno_noche"
         android:layout_width="283dp"
         android:layout_height="65dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#575757"
-        android:fontFamily="@font/josefin_sans"
-        android:text="14:00 a 17:00 pm"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonHorarioElegido"
-        app:layout_constraintVertical_bias="0.0">
-
-    </androidx.appcompat.widget.AppCompatButton>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
-        android:layout_width="283dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="12dp"
         android:backgroundTint="#575757"
         android:fontFamily="@font/josefin_sans"
         android:foregroundTint="#B3191B1D"
+        android:onClick="ejecutar_horario_noche"
         android:text="17:00 a 20:00 pm"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonModificar"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/bt_turno_tarde"
+        app:layout_constraintVertical_bias="0.110000014">
 
     </androidx.appcompat.widget.AppCompatButton>
 
-<com.google.android.material.bottomnavigation.BottomNavigationView
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_turno_tarde"
+        android:layout_width="283dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#575757"
+        android:fontFamily="@font/josefin_sans"
+        android:onClick="ejecutar_horario_tarde"
+        android:text="14:00 a 17:00 pm"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_turno_mediodia">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/btnNavSelector"
     android:layout_width="match_parent"
     android:layout_height="64dp"
@@ -119,7 +119,6 @@ tools:context=".HorariosTurnosActivity">
         app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
         app:srcCompat="@drawable/logo" />
 
     <FrameLayout
