@@ -23,6 +23,8 @@ public class ConfirmacionFinal extends AppCompatActivity {
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
         horario = i.getStringExtra("horario");
+        tv.setText("Tienes un turno el dia: " + fecha + "\n" + "Horario: " + horario);
+
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
