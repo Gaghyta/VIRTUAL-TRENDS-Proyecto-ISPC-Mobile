@@ -63,6 +63,11 @@ public class ComprobacionReserva extends AppCompatActivity {
         //guardar en bd el turno completo
         SessionManager ss = new SessionManager(this);
         String id = ss.getSessionDetails("key_session_id");
+        Turno turno =  new Turno(fecha, horario,comprobante, id);
+        boolean b = dbHelper.agregarTurno(turno);
+        if(!b){
+            Toast.makeText(getApplicationContext(), "Intenta nuevamente", Toast.LENGTH_SHORT).show();
+        }else{
         startActivity(intent);
         finish();
     }
