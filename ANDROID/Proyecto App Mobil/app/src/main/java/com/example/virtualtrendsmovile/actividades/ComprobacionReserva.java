@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.modelos.Turno;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
