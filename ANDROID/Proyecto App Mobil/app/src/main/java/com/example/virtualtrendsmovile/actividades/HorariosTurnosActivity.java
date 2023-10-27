@@ -19,11 +19,10 @@ public class HorariosTurnosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios_turnos);
-        intent
+
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
-        init
-                btMañana = findViewById(R.id.bt_turno_mañana);
+        btMañana = findViewById(R.id.bt_turno_mañana);
         btmediodia = findViewById(R.id.bt_turno_mediodia);
         bttarde = findViewById(R.id.bt_turno_tarde);
         btNoche = findViewById(R.id.bt_turno_noche);
