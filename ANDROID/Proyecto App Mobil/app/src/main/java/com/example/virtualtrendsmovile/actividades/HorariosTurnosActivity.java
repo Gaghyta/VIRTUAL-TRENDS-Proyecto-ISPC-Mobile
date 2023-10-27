@@ -14,11 +14,14 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
     String fecha;
-    Button btMañana, btmediodia, bttarde, btNoche
+    Button btMañana, btmediodia, bttarde, btNoche;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios_turnos);
+        intent
+        Intent i = getIntent();
+        fecha = i.getStringExtra("fecha");
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
