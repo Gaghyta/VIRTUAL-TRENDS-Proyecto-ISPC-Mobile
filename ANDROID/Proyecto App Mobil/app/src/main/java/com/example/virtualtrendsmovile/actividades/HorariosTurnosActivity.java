@@ -73,6 +73,12 @@ public class HorariosTurnosActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
+    public void ejecutar_horario_noche(View view){
+        Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", btNoche.getText().toString());
+        startActivity(intent);
+        finish();
+    }
 
 }
