@@ -24,6 +24,9 @@ public class ComprobacionReserva extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprobacion_rerserva);
+        etComprobante = findViewById(R.id.et_turno_comprobante);
+        //intent
+        Intent i = getIntent();
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
