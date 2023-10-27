@@ -68,13 +68,7 @@ public class ContactoActivity extends AppCompatActivity {
         if (resultado != -1) {
 
             Toast.makeText(this, "Mensaje recibido", Toast.LENGTH_SHORT).show();
-
-            view.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    finish();
-                }
-            }, 1500);
+            
         } else {
 
             Toast.makeText(this, "Error al enviar el mensaje", Toast.LENGTH_SHORT).show();
