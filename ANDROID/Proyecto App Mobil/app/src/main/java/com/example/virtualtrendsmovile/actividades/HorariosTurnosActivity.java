@@ -22,6 +22,11 @@ public class HorariosTurnosActivity extends AppCompatActivity {
         intent
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
+        init
+                btMañana = findViewById(R.id.bt_turno_mañana);
+        btmediodia = findViewById(R.id.bt_turno_mediodia);
+        bttarde = findViewById(R.id.bt_turno_tarde);
+        btNoche = findViewById(R.id.bt_turno_noche);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
