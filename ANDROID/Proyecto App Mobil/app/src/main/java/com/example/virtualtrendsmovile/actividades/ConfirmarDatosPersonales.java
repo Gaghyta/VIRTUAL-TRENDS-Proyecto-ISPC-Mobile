@@ -16,6 +16,10 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos_personales);
+        //intent
+        Intent i = getIntent();
+        fecha = i.getStringExtra("fecha");
+        horario = i.getStringExtra("horario");
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
