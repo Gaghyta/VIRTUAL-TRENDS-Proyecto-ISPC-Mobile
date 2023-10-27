@@ -20,6 +20,7 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
         horario = i.getStringExtra("horario");
+
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
@@ -49,6 +50,8 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
 
     public void confirmar_datos(View view){
         Intent intent = new Intent(this, ComprobacionReserva.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", horario);
         startActivity(intent);
         finish();
     }
