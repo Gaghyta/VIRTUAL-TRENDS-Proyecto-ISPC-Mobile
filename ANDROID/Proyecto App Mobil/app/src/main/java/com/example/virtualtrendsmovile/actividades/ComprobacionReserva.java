@@ -13,10 +13,12 @@ import android.widget.Toast;
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.example.virtualtrendsmovile.modelos.Turno;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ComprobacionReserva extends AppCompatActivity {
+    String fecha, horario, comprobante;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprobacion_rerserva);
