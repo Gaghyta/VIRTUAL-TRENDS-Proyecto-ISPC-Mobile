@@ -81,7 +81,7 @@
             android:layout_height="50dp"
             android:background="#8DDC90"
             android:gravity="center"
-            android:text="TextView"
+            android:text="TextView_FechaHoraTurno"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -92,31 +92,34 @@
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="103dp"
             android:fontFamily="@font/josefin_sans"
             android:text="6"
             android:textAlignment="center"
             android:textSize="96sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/signoExclamación"
+            app:layout_constraintEnd_toStartOf="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="231dp"
-            android:layout_height="60dp"
+            android:layout_width="145dp"
+            android:layout_height="32dp"
             android:fontFamily="@font/josefin_sans"
             android:text="¡TERMINASTE!"
             android:textAlignment="center"
             android:textColor="#B3191B1D"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"
+            app:layout_constraintBottom_toTopOf="@+id/indicaciones"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView15"
-            app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.26999998" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/signoExclamación"
