@@ -18,6 +18,7 @@ public class ConfirmacionFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion_final);
+        tv = findViewById(R.id.tv_turno_mensaje);
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
