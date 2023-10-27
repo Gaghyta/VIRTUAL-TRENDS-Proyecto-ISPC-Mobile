@@ -27,6 +27,11 @@ public class ComprobacionReserva extends AppCompatActivity {
         etComprobante = findViewById(R.id.et_turno_comprobante);
         //intent
         Intent i = getIntent();
+        fecha = i.getStringExtra("fecha");
+        horario = i.getStringExtra("horario");
+        //bd
+        dbHelper = new DatabaseHelper(this);
+        comprobante = etComprobante.getText().toString();
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
