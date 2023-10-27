@@ -19,6 +19,10 @@ public class ConfirmacionFinal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion_final);
         tv = findViewById(R.id.tv_turno_mensaje);
+        intent
+        Intent i = getIntent();
+        fecha = i.getStringExtra("fecha");
+        horario = i.getStringExtra("horario");
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
