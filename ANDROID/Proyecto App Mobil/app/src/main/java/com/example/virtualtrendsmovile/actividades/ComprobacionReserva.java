@@ -68,6 +68,10 @@ public class ComprobacionReserva extends AppCompatActivity {
         if(!b){
             Toast.makeText(getApplicationContext(), "Intenta nuevamente", Toast.LENGTH_SHORT).show();
         }else{
+            Toast.makeText(getApplicationContext(), "Turno creado con exito", Toast.LENGTH_SHORT).show();
+            intent.putExtra("fecha", fecha);
+            intent.putExtra("horario", horario);
+        }
         startActivity(intent);
         finish();
     }
