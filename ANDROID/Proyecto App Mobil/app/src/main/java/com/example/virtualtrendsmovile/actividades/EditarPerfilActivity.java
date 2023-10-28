@@ -170,6 +170,7 @@ public class EditarPerfilActivity extends AppCompatActivity {
                     if (delete == true) {
                         Toast.makeText(getApplicationContext(), "Cuenta eliminada correctamente.", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(this, InicioActivity.class);
+                        sessionManager.logout();
                         startActivity(i);
                     }
                     else {
