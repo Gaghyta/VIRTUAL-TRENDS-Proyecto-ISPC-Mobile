@@ -16,46 +16,62 @@
         android:theme="@style/Theme.VirtualTrendsMovile"
         tools:targetApi="31">
         <activity
+            android:name=".actividades.admin.AdminUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.admin.AdminTurnoActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
             android:name=".actividades.admin.RegistroAdminActivity"
             android:exported="false" />
         <activity
             android:name=".actividades.admin.Administrar"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".actividades.admin.CuentaAdmin"
-            android:exported="false" />
-        <activity android:name=".actividades.admin.GetStartedActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            />
+        </activity>
+        <activity
+            android:name=".actividades.admin.GetStartedActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity
             android:name=".actividades.InicioActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".actividades.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".actividades.NuestroServicio"
             android:configChanges="orientation|screenSize"
-            android:exported="true" />
-        <activity android:name=".actividades.DondeEstamosActivity" />
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".actividades.DondeEstamosActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".actividades.EditarPerfilActivity"
             android:exported="false" />
         <activity
             android:name=".actividades.ContactoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".actividades.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".actividades.SelectorActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
             <!--
             <intent-filter>
@@ -70,8 +86,7 @@
         <activity
             android:name=".actividades.TurneroActivity"
             android:exported="false" />
-        <activity android:name=".actividades.HorariosTurnosActivity" />
-        <!--<activity android:name=".AdminSQLOpenHelper" />-->
+        <activity android:name=".actividades.HorariosTurnosActivity" /> <!-- <activity android:name=".AdminSQLOpenHelper" /> -->
         <activity android:name=".actividades.ConfirmarDatosPersonales" />
         <activity android:name=".actividades.ComprobacionReserva" />
         <activity android:name=".actividades.ConfirmacionFinal" />
