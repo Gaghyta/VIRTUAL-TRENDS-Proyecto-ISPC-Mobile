@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" >
+        app:layout_constraintVertical_bias="1.0">
 
     </FrameLayout>
 
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/menu_selector" />
+        app:menu="@menu/menu_selector"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -61,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout4"
         app:layout_constraintVertical_bias="0.93"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout4"
@@ -86,7 +86,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.80" />
+            app:layout_constraintVertical_bias="0.80"/>
 
         <TextView
             android:id="@+id/textView15"
@@ -102,14 +102,14 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.17000002" />
+            app:layout_constraintVertical_bias="0.17000002"/>
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="231dp"
             android:layout_height="60dp"
             android:fontFamily="@font/josefin_sans"
-            android:text="RESERVÁ TU LUGAR"
+            android:text="RESERVÁTULUGAR"
             android:textAlignment="center"
             android:textColor="#B3191B1D"
             android:textSize="20sp"
@@ -118,7 +118,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26999998" />
+            app:layout_constraintVertical_bias="0.26999998"/>
 
         <TextView
             android:id="@+id/signoExclamación"
@@ -132,28 +132,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.31" />
+            app:layout_constraintVertical_bias="0.31"/>
 
         <TextView
             android:id="@+id/parrafo_explicativo"
             android:layout_width="224dp"
             android:layout_height="70dp"
             android:fontFamily="@font/archivo_regular"
-            android:text="Para completar el proceso deberás cargar tu número de comprobante  y aceptar nuestros términos y condiciones"
+            android:text="Paracompletarelprocesodeberáscargartunúmerodecomprobanteyaceptarnuestrostérminosycondiciones"
             android:textColor="@color/black"
             android:textColorLink="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.60" />
+            app:layout_constraintVertical_bias="0.60"/>
 
         <CheckBox
             android:id="@+id/checkBox"
-            android:layout_width="127dp"
-            android:layout_height="51dp"
+            android:layout_width="332dp"
+            android:layout_height="29dp"
             android:fontFamily="@font/archivo_regular"
-            android:text="CheckBox"
+            android:text="Acepto los términos y condiciones"
             android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -182,6 +182,9 @@
         app:layout_constraintVertical_bias="0.56">
 
     </androidx.appcompat.widget.AppCompatButton>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

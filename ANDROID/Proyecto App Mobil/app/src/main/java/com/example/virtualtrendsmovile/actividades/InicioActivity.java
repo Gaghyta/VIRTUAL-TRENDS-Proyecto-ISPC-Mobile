@@ -1,18 +1,25 @@
 package com.example.virtualtrendsmovile.actividades;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
 
 public class InicioActivity extends AppCompatActivity {
+
+    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +27,13 @@ public class InicioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
-        nav.setSelectedItemId(R.id.logout);
-        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        nav.setSelectedItemId(R.id.back);
+
+
+
+        bottomNav = findViewById(R.id.btnNavSelector);
+        bottomNav.setSelectedItemId(R.id.logout);
+        bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
@@ -50,4 +62,5 @@ public class InicioActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
+
 }
