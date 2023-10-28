@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -25,6 +26,7 @@ public class NuestroServicio extends AppCompatActivity {
 
     //private static final String VIDEO_SAMPLE = "body_scanner_3d_1";
 
+    SessionManager sessionManager;
     private VideoView videoView;
     //private VideoView videoViewLand;
 
@@ -180,6 +182,7 @@ public class NuestroServicio extends AppCompatActivity {
                 } else if (id == R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id == R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return true;

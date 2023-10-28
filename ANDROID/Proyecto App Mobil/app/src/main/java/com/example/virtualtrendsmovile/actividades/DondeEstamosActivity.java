@@ -10,13 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
 public class DondeEstamosActivity extends AppCompatActivity {
 
-
+SessionManager sessionManager;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     BottomNavigationView bottomNav;
@@ -74,6 +75,7 @@ public class DondeEstamosActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return false;

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -27,7 +28,7 @@ public class ContactoActivity extends AppCompatActivity {
     EditText editEmail, editAsunto, editMensaje;
     private DatabaseHelper dbHelper;
 
-
+SessionManager sessionManager;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     BottomNavigationView bottomNav;
@@ -90,6 +91,7 @@ public class ContactoActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return false;

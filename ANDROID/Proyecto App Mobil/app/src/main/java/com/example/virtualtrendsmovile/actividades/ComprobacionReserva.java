@@ -18,6 +18,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ComprobacionReserva extends AppCompatActivity {
+
+    SessionManager sessionManager;
     String fecha, horario, comprobante;
     EditText etComprobante;
     private DatabaseHelper dbHelper;
@@ -52,6 +54,7 @@ public class ComprobacionReserva extends AppCompatActivity {
                 } else if (id == R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id == R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
 

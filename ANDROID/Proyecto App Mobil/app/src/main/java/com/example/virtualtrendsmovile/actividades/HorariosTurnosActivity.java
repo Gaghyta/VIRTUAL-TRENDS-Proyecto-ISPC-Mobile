@@ -11,10 +11,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
+
+    SessionManager sessionManager;
     String fecha;
     Button btMañana, btmediodia, bttarde, btNoche;
 
@@ -48,6 +51,8 @@ public class HorariosTurnosActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), HorariosTurnosActivity.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
+                    startActivity(new Intent(getApplicationContext(), InicioActivity.class));
 
                 }
                 return false;
