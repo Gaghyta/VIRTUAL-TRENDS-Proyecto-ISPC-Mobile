@@ -1,20 +1,25 @@
 package com.example.virtualtrendsmovile.actividades;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CalendarView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class TurneroActivity extends AppCompatActivity {
@@ -85,5 +90,7 @@ public class TurneroActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    
 
 }

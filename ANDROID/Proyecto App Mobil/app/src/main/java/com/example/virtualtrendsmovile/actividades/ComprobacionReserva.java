@@ -21,10 +21,11 @@ public class ComprobacionReserva extends AppCompatActivity {
     String fecha, horario, comprobante;
     EditText etComprobante;
     private DatabaseHelper dbHelper;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comprobacion_reserva);
-        //etComprobante = findViewById(R.id.et_turno_comprobante);
+        setContentView(R.layout.activity_comprobacion_rerserva);
+        etComprobante = findViewById(R.id.et_turno_comprobante);
         //intent
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
@@ -32,6 +33,7 @@ public class ComprobacionReserva extends AppCompatActivity {
         //bd
         dbHelper = new DatabaseHelper(this);
         comprobante = etComprobante.getText().toString();
+
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
 
@@ -57,6 +59,7 @@ public class ComprobacionReserva extends AppCompatActivity {
             }
 
         });
+
     }
     public void comprobacion_reserva(View view){
         Intent intent = new Intent(this, ConfirmacionFinal.class);

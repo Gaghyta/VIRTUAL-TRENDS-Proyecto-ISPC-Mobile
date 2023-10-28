@@ -34,7 +34,7 @@ public class CuentaAdmin extends AppCompatActivity {
         codigo = findViewById(R.id.et_admin_codigo);
         dbHelper = new DatabaseHelper(this);
         sessionManager = new SessionManager(getApplicationContext());
-        txtAdminRegistro = findViewById(R.id.txt_admin_registro);
+        txtAdminRegistro = findViewById(R.id.txt_admin_logout);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +53,8 @@ public class CuentaAdmin extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Administrar.class));
                         finish();
                     }else {
-                        Toast.makeText(CuentaAdmin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), Administrar.class));
+                        //Toast.makeText(CuentaAdmin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

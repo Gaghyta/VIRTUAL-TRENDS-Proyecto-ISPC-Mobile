@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.virtualtrendsmovile.modelos.Turno;
 import com.example.virtualtrendsmovile.modelos.Usuario;
 
-
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "virtual_db";
     private static final int DATABASE_VERSION = 1;
@@ -44,6 +43,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_IDUSUARIO = "idUsuario";
 
 
+
+
     // Sentencia SQL para crear la tabla
     private static final String TABLE_CREATE =
             "CREATE TABLE " + TABLE_USERS + " (" +
@@ -74,6 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_HORA + " TEXT, " +
                     COLUMN_COMPROBANTE + " TEXT, " +
                     COLUMN_IDUSUARIO + " TEXT " +
+
                     ")";
 
     public DatabaseHelper(Context context) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC191B1D"
-    tools:context=".modelos.Turnos_Admin">
+    tools:context=".actividades.admin.AdminUsuarioActivity">
 
 
     <View
@@ -17,8 +17,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71000004"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,NotSibling" />
 
     <View
@@ -26,9 +26,10 @@
         android:layout_width="250dp"
         android:layout_height="2dp"
         android:layout_below="@id/textView"
+        android:layout_marginTop="64dp"
         android:background="#F7F7F2"
-        app:layout_constraintBottom_toTopOf="@+id/lineaSuperiorTurnos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,NotSibling" />
@@ -38,45 +39,33 @@
         android:layout_width="259dp"
         android:layout_height="40dp"
         android:fontFamily="@font/josefin_sans"
-        android:text="TURNOS"
+        android:text="USUARIO"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintTop_toBottomOf="@+id/lineaInferior3" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="331dp"
-        android:layout_height="319dp"
+        android:layout_width="280dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:textColor="#CC191B1D"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btnNavSelector"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#3B3D40"
-        app:itemIconTint="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/menu_selector" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
         android:layout_width="173dp"
         android:layout_height="65dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#B3191B1D"
         android:fontFamily="@font/josefin_sans"
         android:text="MODIFICAR"
@@ -84,13 +73,12 @@
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton3" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton3"
         android:layout_width="56dp"
         android:layout_height="63dp"
         android:backgroundTint="#B3191B1D"
@@ -102,10 +90,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintHorizontal_bias="0.335"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.07999998" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="56dp"
@@ -119,21 +108,21 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="125dp"
         android:layout_height="143dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
