@@ -76,6 +76,21 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
+            android:id="@+id/tv_turno_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#8DDC90"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/indicaciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
             android:id="@+id/textView15"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -84,12 +99,8 @@
             android:textAlignment="center"
             android:textSize="96sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.17000002" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView16"
@@ -101,10 +112,10 @@
             android:textColor="#B3191B1D"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="@+id/textView15"
             app:layout_constraintVertical_bias="0.26999998" />
 
         <TextView
@@ -115,10 +126,10 @@
             android:text="!"
             android:textColor="#D65E69"
             android:textSize="66sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/parrafo_explicativo"
+            app:layout_constraintEnd_toStartOf="@+id/indicaciones"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/indicaciones"
             app:layout_constraintVertical_bias="0.35000002" />
 
         <TextView
@@ -131,20 +142,16 @@
             android:textColorLink="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.84000003" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/indicaciones"
             android:layout_width="237dp"
             android:layout_height="99dp"
             android:text="RECORDÁ TRAER  UN CAMBIO DE ROPA QUE MARQUE EN DETALLE TODO TU CUERPO (Recomendamos ropa deportiva de lycra/spandex. Ninguna prenda puede ser holgada) ."
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/parrafo_explicativo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.65999997" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

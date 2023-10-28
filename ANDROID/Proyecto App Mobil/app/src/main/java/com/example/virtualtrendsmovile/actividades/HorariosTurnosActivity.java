@@ -8,16 +8,30 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.Button;
+
 import com.example.virtualtrendsmovile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
+    String fecha;
+    Button btMañana, btmediodia, bttarde, btNoche;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios_turnos);
+        //intent
+        Intent i = getIntent();
+        fecha = i.getStringExtra("fecha");
+
+        //init
+        btMañana = findViewById(R.id.bt_turno_mañana);
+        btmediodia = findViewById(R.id.bt_turno_mediodia);
+        bttarde = findViewById(R.id.bt_turno_tarde);
+        btNoche = findViewById(R.id.bt_turno_noche);
+
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
@@ -44,10 +58,33 @@ public class HorariosTurnosActivity extends AppCompatActivity {
 
     public void ejecutar_horario(View view){
         Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", btmediodia.getText().toString());
         startActivity(intent);
         finish();
     }
 
+    public void ejecutar_horario_mañana(View view){
+        Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", btMañana.getText().toString());
+        startActivity(intent);
+        finish();
+    }
+    public void ejecutar_horario_tarde(View view){
+        Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", bttarde.getText().toString());
+        startActivity(intent);
+        finish();
+    }
+    public void ejecutar_horario_noche(View view){
+        Intent intent = new Intent(this, ConfirmarDatosPersonales.class);
+        intent.putExtra("fecha", fecha);
+        intent.putExtra("horario", btNoche.getText().toString());
+        startActivity(intent);
+        finish();
+    }
 
 
 

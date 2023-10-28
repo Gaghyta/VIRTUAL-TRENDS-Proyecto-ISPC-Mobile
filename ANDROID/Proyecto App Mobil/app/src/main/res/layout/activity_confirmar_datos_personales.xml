@@ -22,7 +22,7 @@
     </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonHorarioElegido"
+        android:id="@+id/bt_turno_mediodia"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:backgroundTint="#F7F7F2"
@@ -39,7 +39,7 @@
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonModificar"
+        android:id="@+id/bt_turno_modificar"
         android:layout_width="283dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
@@ -47,13 +47,14 @@
         android:fontFamily="@font/josefin_sans"
         android:text="MODIFICAR"
         android:textColor="#FFFFFF"
+        android:onClick="ejecutar_modificar"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonHorarioElegido"
+        app:layout_constraintTop_toBottomOf="@+id/bt_turno_mediodia"
         app:layout_constraintVertical_bias="0.0">
 
     </androidx.appcompat.widget.AppCompatButton>
