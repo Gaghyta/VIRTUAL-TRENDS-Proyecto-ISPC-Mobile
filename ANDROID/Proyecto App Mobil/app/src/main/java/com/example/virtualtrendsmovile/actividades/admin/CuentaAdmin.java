@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
-import com.example.virtualtrendsmovile.actividades.InicioActivity;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
 import com.example.virtualtrendsmovile.modelos.Usuario;
 import com.example.virtualtrendsmovile.util.SessionManager;
@@ -35,7 +34,7 @@ public class CuentaAdmin extends AppCompatActivity {
         codigo = findViewById(R.id.et_admin_codigo);
         dbHelper = new DatabaseHelper(this);
         sessionManager = new SessionManager(getApplicationContext());
-        txtAdminRegistro = findViewById(R.id.txt_admin_registro);
+        txtAdminRegistro = findViewById(R.id.txt_admin_logout);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
