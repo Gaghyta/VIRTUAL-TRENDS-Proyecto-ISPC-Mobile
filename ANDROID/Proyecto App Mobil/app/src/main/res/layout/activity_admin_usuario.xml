@@ -65,7 +65,7 @@
         android:id="@+id/appCompatButton2"
         android:layout_width="173dp"
         android:layout_height="65dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#B3191B1D"
         android:fontFamily="@font/josefin_sans"
         android:text="MODIFICAR"
@@ -76,6 +76,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton3" />
+
+    <TextView
+        android:id="@+id/txt_admin_atras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:fontFamily="@font/josefin_sans"
+        android:text="Atras"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton3"
@@ -117,7 +134,7 @@
         android:id="@+id/imageView9"
         android:layout_width="125dp"
         android:layout_height="143dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
