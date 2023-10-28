@@ -65,6 +65,7 @@ public class CuentaAdmin extends AppCompatActivity {
                 startActivity(new Intent(CuentaAdmin.this, RegistroAdminActivity.class));
             }
         });*/
+        //gfjcc
 
         //NUEVO MÉTODO PARA ACCEDER A LA PANTALLA DE REGISTRO DESDE EL TEXTO "¿No tenés una cuenta? Registráte"
         txtAdminRegistro.setOnClickListener(new View.OnClickListener() {
