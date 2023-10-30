@@ -1,0 +1,61 @@
+Index: app/src/main/res/layout/activity_inicio.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@drawable/fondo\"\r\n    tools:context=\".InicioActivity\">\r\n\r\n\r\n    <com.google.android.material.bottomnavigation.BottomNavigationView\r\n        android:id=\"@+id/btnNavSelector\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"64dp\"\r\n        android:background=\"#3B3D40\"\r\n        app:itemIconTint=\"@drawable/selector\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:menu=\"@menu/menu_selector\" />\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <FrameLayout\r\n            android:id=\"@+id/frameLayout4\"\r\n            android:layout_width=\"412dp\"\r\n            android:layout_height=\"200dp\"\r\n            android:layout_marginBottom=\"60dp\"\r\n            android:background=\"#CC191B1D\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\">\r\n\r\n        </FrameLayout>\r\n\r\n        <FrameLayout\r\n            android:id=\"@+id/frameLayout\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"200dp\"\r\n            android:background=\"#B3191B1D\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        </FrameLayout>\r\n\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/button6\"\r\n            android:layout_width=\"283dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginBottom=\"30dp\"\r\n            android:background=\"#D3FDFBFB\"\r\n            android:fontFamily=\"sans-serif-medium\"\r\n            android:onClick=\"launchLoginActivity\"\r\n            android:text=\"@string/login_button\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/siguiente\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/siguiente\"\r\n            android:layout_width=\"283dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"100dp\"\r\n            android:background=\"#BE1E1B1B\"\r\n            android:onClick=\"launchRegisterActivity\"\r\n            android:text=\"@string/register_button\"\r\n            android:textColor=\"#FFFFFF\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/frameLayout4\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/frameLayout\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginBottom=\"90dp\"\r\n            android:src=\"@drawable/logo\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n    <androidx.drawerlayout.widget.DrawerLayout\r\n        android:id=\"@+id/drawer_layout\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        tools:context=\".InicioActivity\">\r\n\r\n        <com.google.android.material.navigation.NavigationView\r\n            android:id=\"@+id/nav_view\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_gravity=\"start\"\r\n            android:background=\"#575757\"\r\n            app:menu=\"@menu/menu\" />\r\n    </androidx.drawerlayout.widget.DrawerLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_inicio.xml b/app/src/main/res/layout/activity_inicio.xml
+--- a/app/src/main/res/layout/activity_inicio.xml	
++++ b/app/src/main/res/layout/activity_inicio.xml	
+@@ -19,6 +19,25 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:menu="@menu/menu_selector" />
+ 
++    <androidx.drawerlayout.widget.DrawerLayout
++        android:id="@+id/drawer_layout"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        tools:context=".InicioActivity">
++
++        <com.google.android.material.navigation.NavigationView
++            android:id="@+id/nav_view"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_gravity="start"
++            android:background="#575757"
++            app:menu="@menu/menu" />
++    </androidx.drawerlayout.widget.DrawerLayout>
++
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+@@ -84,23 +103,4 @@
+             app:layout_constraintStart_toStartOf="parent" />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ 
+-    <androidx.drawerlayout.widget.DrawerLayout
+-        android:id="@+id/drawer_layout"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        tools:context=".InicioActivity">
+-
+-        <com.google.android.material.navigation.NavigationView
+-            android:id="@+id/nav_view"
+-            android:layout_width="wrap_content"
+-            android:layout_height="match_parent"
+-            android:layout_gravity="start"
+-            android:background="#575757"
+-            app:menu="@menu/menu" />
+-    </androidx.drawerlayout.widget.DrawerLayout>
+-
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
