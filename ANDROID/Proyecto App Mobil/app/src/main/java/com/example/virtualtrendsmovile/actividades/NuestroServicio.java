@@ -66,6 +66,7 @@ public class NuestroServicio extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         setContentView(R.layout.activity_nuestro_servicio);
+        sessionManager = new SessionManager(getApplicationContext());
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);

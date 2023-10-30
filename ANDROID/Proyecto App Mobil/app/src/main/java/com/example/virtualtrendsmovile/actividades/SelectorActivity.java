@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class SelectorActivity extends AppCompatActivity {
 
-SessionManager sessionManager;
+    SessionManager sessionManager;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     BottomNavigationView bottomNav;
@@ -38,6 +38,8 @@ SessionManager sessionManager;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selector);
+
+        sessionManager = new SessionManager(getApplicationContext());
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);

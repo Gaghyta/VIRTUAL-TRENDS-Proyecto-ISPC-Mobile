@@ -22,6 +22,7 @@ public class ConfirmacionFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion_final);
+        sessionManager = new SessionManager(getApplicationContext());
         tv = findViewById(R.id.tv_turno_mensaje);
         //intent
         Intent i = getIntent();

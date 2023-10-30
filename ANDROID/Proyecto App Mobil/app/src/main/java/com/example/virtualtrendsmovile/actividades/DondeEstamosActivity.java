@@ -35,6 +35,7 @@ SessionManager sessionManager;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donde_estamos);
+        sessionManager = new SessionManager(getApplicationContext());
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);

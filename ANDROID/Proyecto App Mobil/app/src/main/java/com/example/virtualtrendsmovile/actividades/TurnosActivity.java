@@ -23,6 +23,7 @@ SessionManager sessionManager;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnos);
+        sessionManager = new SessionManager(getApplicationContext());
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

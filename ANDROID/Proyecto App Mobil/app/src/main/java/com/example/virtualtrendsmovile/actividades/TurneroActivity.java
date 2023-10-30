@@ -35,6 +35,7 @@ public class TurneroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnero);
+        sessionManager = new SessionManager(getApplicationContext());
         //calendario
         calendarView = findViewById(R.id.calendarView);
         calendar = Calendar.getInstance();

@@ -20,6 +20,7 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos_personales);
+        sessionManager = new SessionManager(getApplicationContext());
 
         //intent
         Intent i = getIntent();

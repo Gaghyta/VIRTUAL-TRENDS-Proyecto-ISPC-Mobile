@@ -25,6 +25,7 @@ public class HorariosTurnosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios_turnos);
+        sessionManager = new SessionManager(getApplicationContext());
         //intent
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
