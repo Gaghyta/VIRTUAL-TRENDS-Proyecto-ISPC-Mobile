@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".actividades.ComprobacionReserva">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="414dp"
+        android:layout_height="846dp"
+        android:background="#B3191B1D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="409dp"
+            android:layout_height="528dp"
+            android:background="#D2F7F7F2">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_sans"
+                android:text="5"
+                android:textAlignment="center"
+                android:textSize="96sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.009"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.347" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="231dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/josefin_sans"
+                android:text="RESERVÁTULUGAR"
+                android:textAlignment="center"
+                android:textColor="#B3191B1D"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/signoExclamación"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/signoExclamación"
+                android:layout_width="20dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="208dp"
+                android:fontFamily="@font/josefin_sans"
+                android:text="!"
+                android:textColor="#D65E69"
+                android:textSize="66sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/parrafo_explicativo"
+                android:layout_width="224dp"
+                android:layout_height="70dp"
+                android:fontFamily="@font/archivo_regular"
+                android:text="Paracompletarelprocesodeberáscargartunúmerodecomprobanteyaceptarnuestrostérminosycondiciones"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signoExclamación"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="332dp"
+                android:layout_height="29dp"
+                android:fontFamily="@font/archivo_regular"
+                android:text="Acepto los términos y condiciones"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_turno_comprobante"
+                app:layout_constraintVertical_bias="0.75" />
+
+            <EditText
+                android:id="@+id/et_turno_comprobante"
+                android:layout_width="228dp"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parrafo_explicativo"
+                app:layout_constraintVertical_bias="0.38" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botonModificar"
+        android:layout_width="283dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="781dp"
+        android:backgroundTint="#191B1D"
+        android:fontFamily="@font/josefin_sans"
+        android:text="MODIFICAR"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botonParaConfirmarReserva"
+        android:layout_width="283dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#F7F7F2"
+        android:fontFamily="@font/josefin_sans"
+        android:onClick="comprobacion_reserva"
+        android:text="CONFIRMAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.73">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavSelector"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#3B3D40"
+        app:itemIconTint="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu_selector"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="141dp"
+        android:layout_height="120dp"
+        android:contentDescription="casi_todo"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonParaConfirmarReserva"
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/logo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
