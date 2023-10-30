@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".SelectorActivity">
+    tools:context=".actividades.SelectorActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -20,11 +20,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/etext_Email"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
         android:ems="10"
+        android:hint="Ingrese Email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +47,7 @@
         app:menu="@menu/menu_selector" />
 
     <TextView
-        android:id="@+id/textViewPassword"
+        android:id="@+id/tvPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -61,21 +62,22 @@
         app:layout_constraintTop_toTopOf="@+id/frameLayout" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/etext_Password"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginBottom="330dp"
         android:background="@color/white"
         android:ems="10"
+        android:hint="Ingrese Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
         app:layout_constraintVertical_bias="0.39" />
 
     <TextView
-        android:id="@+id/textViewEmail"
+        android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
@@ -90,7 +92,7 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonAccept"
+        android:id="@+id/btnIniciar_sesion"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="64dp"
@@ -102,18 +104,18 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etext_Password" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/archivo_regular"
         android:text="@string/login_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

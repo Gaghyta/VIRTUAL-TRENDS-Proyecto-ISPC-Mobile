@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoblanco"
-    tools:context=".EditarPerfilActivity">
+    tools:context=".actividades.EditarPerfilActivity">
 
     <FrameLayout
         android:id="@+id/Frame"
@@ -37,15 +37,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
         android:layout_marginEnd="83dp"
-        android:text="número de teléfono"
+        android:text="correo"
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/input_direccion" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/input_direccion"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -56,20 +56,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/input_correo"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:layout_marginEnd="93dp"
         android:background="@color/white"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Frame"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/input_nombre"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -92,7 +92,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre" />
 
     <TextView
         android:id="@+id/txtTitle"
@@ -116,13 +116,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="83dp"
         android:text="nombre completo"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintBottom_toTopOf="@+id/input_nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
@@ -139,11 +139,11 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/input_correo" />
 
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/input_password"
         android:layout_width="228dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
@@ -162,11 +162,10 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnNavEditar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/btn_confirmar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
@@ -178,7 +177,24 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_eliminar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="83dp"
+        android:background="#D3ED0000"
+        android:fontFamily="@font/archivo_regular"
+        android:text="ELIMINAR CUENTA"
+        android:textColor="#fff"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirmar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNavEditar"

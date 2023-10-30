@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">VirtualTrendsMovile</string>
+    <string name="app_name">Virtual Trends Movile</string>
     <string name="login_button">INICIAR SESIÓN</string>
     <string name="register_button">CREAR CUENTA</string>
     <string name="login_title">INGRESÁ A TU CUENTA</string>
     <string name="email_title">email</string>
     <string name="enter_button">CONFIRMAR</string>
     <string name="password_title">password</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
     <string name="descripcion_imagen">Fondo gris con imagen de avatar caminando con bolso en mano, pantalón amplio, remera holgada y chaleco inflado.</string>
 </resources>

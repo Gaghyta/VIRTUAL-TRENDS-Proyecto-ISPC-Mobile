@@ -5,17 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".SelectorActivity"
+    tools:context=".actividades.SelectorActivity"
     tools:ignore="ExtraText">
 
     <FrameLayout
         android:id="@+id/frameLayout3"
-        android:layout_width="0dp"
-        android:layout_height="172dp"
-        android:background="#D8939090"
+        android:layout_width="412dp"
+        android:layout_height="212dp"
+        android:background="#D2F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView13"
@@ -28,15 +30,15 @@
             android:textAlignment="center"
             android:textColor="#B3191B1D"
             android:textSize="96sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="260dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/josefin_sans"
             android:text="ELEGÍ TU FECHA "
             android:textAlignment="center"
@@ -68,10 +70,10 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="353dp"
-        android:layout_height="295dp"
+        android:layout_width="312dp"
+        android:layout_height="301dp"
         android:background="#817A7A"
-        android:backgroundTint="#AB686565"
+        android:backgroundTint="#CDA19D9D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +81,12 @@
         app:layout_constraintVertical_bias="0.426" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
         android:layout_width="230dp"
         android:layout_height="58dp"
-        android:background="#B3191B1D"
+        android:background="#191B1D"
         android:fontFamily="@font/josefin_sans"
+        android:onClick="ejecutarTurno"
         android:text="ENVIAR"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

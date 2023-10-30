@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoblanco"
-    tools:context=".RegisterActivity">
+    tools:context=".actividades.RegisterActivity">
 
     <FrameLayout
         android:id="@+id/Frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="411dp"
+        android:layout_height="847dp"
         android:layout_marginEnd="6dp"
         android:background="#CC191B1D"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
@@ -43,16 +44,17 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreCompleto" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/editTextDireccion"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:layout_marginEnd="93dp"
         android:background="#F9F9F9"
         android:ems="10"
+        android:hint="Ingrese Direccion"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -69,7 +71,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDNI" />
 
     <TextView
         android:id="@+id/txtTitle"
@@ -103,13 +105,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextNombreCompleto"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:layout_marginEnd="93dp"
         android:background="#F9F9F9"
         android:ems="10"
+        android:hint="Ingrese Nombre"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,37 +122,39 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="550dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnNavSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Frame"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintTop_toTopOf="@+id/Frame" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/Enviar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="83dp"
         android:background="#D3FDFBFB"
         android:fontFamily="@font/archivo_regular"
-        android:text="ENVIAR"
         android:onClick="launchSelectorActivity"
+        android:text="ENVIAR"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/Frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintVertical_bias="0.13999999" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editTextDNI"
         android:layout_width="234dp"
         android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="number"
         android:background="#F9F9F9"
+        android:ems="10"
+        android:hint="Ingrese D.N.I"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -164,15 +169,16 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDireccion" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmailAddress"
         android:layout_width="234dp"
         android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
         android:background="#F9F9F9"
+        android:ems="10"
+        android:hint="Ingrese Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -183,21 +189,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
         android:layout_marginEnd="78dp"
-        android:text="password"
+        android:text="contraseña"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPassword"
         android:layout_width="234dp"
         android:layout_height="41dp"
         android:layout_marginStart="93dp"
         android:layout_marginEnd="93dp"
-        android:ems="10"
-        android:inputType="textPassword"
         android:background="#F9F9F9"
+        android:ems="10"
+        android:hint="Ingrese Contraseña"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
