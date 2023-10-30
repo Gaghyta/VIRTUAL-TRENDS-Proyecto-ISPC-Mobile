@@ -9,14 +9,14 @@ Es requisito tener una cuenta y los datos verificados, así como abonar previame
 
 --------------------------------------------------------------------------
 
-[![VIDEO FINAL](https://img.youtube.com/vi/u3KOHIMxTFg/0.jpg)](https://www.youtube.com/watch?v=u3KOHIMxTFg?si=644irla2xksrghBp)
+[![VIDEO FINAL](https://img.youtube.com/vi/oSj62rfC_34/0.jpg)](https://www.youtube.com/watch?v=oSj62rfC_34?si=70q94LPoRuQfdzHr)
+
 
 
 --------------------------------------------------------------------------
 
-[![VIDEO FINAL desarrollo EXTRA Módulo ADMIN](https://img.youtube.com/vi/oSj62rfC_34/0.jpg)](https://www.youtube.com/watch?v=oSj62rfC_34?si=70q94LPoRuQfdzHr)
 
-
+[![VIDEO FINAL desarrollo EXTRA Módulo ADMIN](https://img.youtube.com/vi/u3KOHIMxTFg/0.jpg)](https://www.youtube.com/watch?v=u3KOHIMxTFg?si=644irla2xksrghBp)
 
 
 --------------------------------------------------------------------------
