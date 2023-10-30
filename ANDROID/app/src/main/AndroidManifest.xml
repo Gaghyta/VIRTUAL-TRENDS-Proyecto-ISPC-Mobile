@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VirtualTrendsMovile"
+        tools:targetApi="31">
+        <activity
+            android:name=".actividades.admin.AdminUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.admin.AdminTurnoActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".actividades.admin.RegistroAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.admin.Administrar"
+            android:exported="false"/>
+        <activity
+            android:name=".actividades.admin.CuentaAdmin"
+            android:exported="false">
+
+            />
+        </activity>
+        <activity
+            android:name=".actividades.admin.GetStartedActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actividades.InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.NuestroServicio"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".actividades.DondeEstamosActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".actividades.EditarPerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.ContactoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".actividades.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.SelectorActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".actividades.TurnosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.TurneroActivity"
+            android:exported="false" />
+        <activity android:name=".actividades.HorariosTurnosActivity" /> <!-- <activity android:name=".AdminSQLOpenHelper" /> -->
+        <activity android:name=".actividades.ConfirmarDatosPersonales" />
+        <activity android:name=".actividades.ComprobacionReserva" />
+        <activity android:name=".actividades.ConfirmacionFinal" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

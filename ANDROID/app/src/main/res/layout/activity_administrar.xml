@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC191B1D"
+    tools:context=".actividades.admin.Administrar">
+
+
+    <View
+        android:id="@+id/lineaSuperior2"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView"
+        android:background="#F7F7F2"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.110000014"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <View
+        android:id="@+id/lineaInferior2"
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/textView"
+        android:background="#F7F7F2"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="304dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/josefin_sans"
+        android:text="ADMINISTRAR"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_admin_usuario"
+        android:layout_width="276dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#B3191B1D"
+        android:fontFamily="@font/josefin_sans"
+        android:text="USUARIOS"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineaInferior2"
+        tools:fontFamily="@font/josefin_sans" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_admin_turno"
+        android:layout_width="276dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#B3191B1D"
+        android:fontFamily="@font/josefin_sans"
+        android:text="TURNOS"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_admin_usuario"
+        app:layout_constraintVertical_bias="0.38"
+        tools:fontFamily="@font/josefin_sans" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
