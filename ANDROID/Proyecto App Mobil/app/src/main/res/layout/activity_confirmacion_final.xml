@@ -94,6 +94,7 @@
             android:id="@+id/tv_turno_mensaje"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="8dp"
             android:background="#B3749A5B"
             android:fontFamily="@font/josefin_sans"
             android:gravity="center"
@@ -169,7 +170,7 @@
             android:layout_width="223dp"
             android:layout_height="48dp"
             android:fontFamily="@font/archivo_regular"
-            android:text="DEBERÁS CONCURRIR 15 MINUTOS ANTES DEL TURNO "
+            android:text="DEBERÁS CONCURRIR 15 MINUTOS ANTES DEL TURNO"
             android:textColor="@color/black"
             android:textColorLink="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -180,7 +181,7 @@
             android:id="@+id/indicaciones"
             android:layout_width="237dp"
             android:layout_height="99dp"
-            android:text="RECORDÁ TRAER  UN CAMBIO DE ROPA QUE MARQUE EN DETALLE TODO TU CUERPO (Recomendamos ropa deportiva de lycra/spandex. Ninguna prenda puede ser holgada) ."
+            android:text="RECORDÁ TRAER  UN CAMBIO DE ROPA QUE MARQUE EN DETALLE TODO TU CUERPO (Recomendamos ropa deportiva de lycra/spandex. Ninguna prenda puede ser holgada)."
             app:layout_constraintBottom_toTopOf="@+id/parrafo_explicativo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

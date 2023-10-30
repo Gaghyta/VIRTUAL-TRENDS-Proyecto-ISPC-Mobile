@@ -7,35 +7,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.widget.Button;
-
 import com.example.virtualtrendsmovile.R;
-import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HorariosTurnosActivity extends AppCompatActivity {
-
-    SessionManager sessionManager;
     String fecha;
     Button btMañana, btmediodia, bttarde, btNoche;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios_turnos);
-        sessionManager = new SessionManager(getApplicationContext());
-        //intent
+
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
-
-        //init
         btMañana = findViewById(R.id.bt_turno_mañana);
         btmediodia = findViewById(R.id.bt_turno_mediodia);
         bttarde = findViewById(R.id.bt_turno_tarde);
         btNoche = findViewById(R.id.bt_turno_noche);
-
 
         BottomNavigationView nav = findViewById(R.id.btnNavSelector);
         nav.setSelected(true);
@@ -52,8 +42,6 @@ public class HorariosTurnosActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), HorariosTurnosActivity.class));
                 } else if (id==R.id.logout) {
-                    sessionManager.logout();
-                    startActivity(new Intent(getApplicationContext(), InicioActivity.class));
 
                 }
                 return false;
@@ -91,7 +79,5 @@ public class HorariosTurnosActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-
 
 }
