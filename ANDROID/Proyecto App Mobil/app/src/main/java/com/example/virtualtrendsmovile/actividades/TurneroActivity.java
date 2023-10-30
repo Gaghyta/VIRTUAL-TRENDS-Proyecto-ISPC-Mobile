@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -28,10 +29,13 @@ public class TurneroActivity extends AppCompatActivity {
     Calendar calendar;
     String fechaTurno;
 
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnero);
+        sessionManager = new SessionManager(getApplicationContext());
         //calendario
         calendarView = findViewById(R.id.calendarView);
         calendar = Calendar.getInstance();
@@ -51,6 +55,7 @@ public class TurneroActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return false;

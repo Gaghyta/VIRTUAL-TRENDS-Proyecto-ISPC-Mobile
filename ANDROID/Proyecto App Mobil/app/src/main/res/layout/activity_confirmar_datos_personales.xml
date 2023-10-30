@@ -113,10 +113,10 @@
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="231dp"
-            android:layout_height="60dp"
+            android:layout_width="230dp"
+            android:layout_height="41dp"
             android:fontFamily="@font/josefin_sans"
-            android:text="CONFIRMÁ TUS DATOS PERSONALES"
+            android:text="CONFIRMÁ TUS DATOS "
             android:textAlignment="center"
             android:textColor="#B3191B1D"
             android:textSize="20sp"

@@ -9,14 +9,20 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ConfirmarDatosPersonales extends AppCompatActivity {
+
+    SessionManager sessionManager;
     String fecha, horario;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos_personales);
+
+
+        sessionManager = new SessionManager(getApplicationContext());
         //intent
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
@@ -39,6 +45,7 @@ public class ConfirmarDatosPersonales extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
 

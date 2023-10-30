@@ -6,7 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +17,10 @@ import android.widget.Toast;
 
 import com.example.virtualtrendsmovile.R;
 import com.example.virtualtrendsmovile.database.DatabaseHelper;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class ContactoActivity extends AppCompatActivity {
@@ -24,10 +28,49 @@ public class ContactoActivity extends AppCompatActivity {
     EditText editEmail, editAsunto, editMensaje;
     private DatabaseHelper dbHelper;
 
+SessionManager sessionManager;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    BottomNavigationView bottomNav;
+    ActionBarDrawerToggle drawerToggle;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+        sessionManager = new SessionManager(getApplicationContext());
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open, R.string.close);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if(id==R.id.home){
+                    startActivity(new Intent(getApplicationContext(), SelectorActivity.class));
+                }  else if (id==R.id.profile) {
+                    startActivity(new Intent(getApplicationContext(), EditarPerfilActivity.class));
+                }  else if (id==R.id.calendar) {
+                    startActivity(new Intent(getApplicationContext(), TurnosActivity.class));
+                }
+                return false;
+            }
+        });
 
         editEmail = findViewById(R.id.editEmail);
         editAsunto = findViewById(R.id.editAsunto);
@@ -49,6 +92,7 @@ public class ContactoActivity extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
                 return false;
@@ -68,13 +112,7 @@ public class ContactoActivity extends AppCompatActivity {
         if (resultado != -1) {
 
             Toast.makeText(this, "Mensaje recibido", Toast.LENGTH_SHORT).show();
-
-            view.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    finish();
-                }
-            }, 1500);
+            
         } else {
 
             Toast.makeText(this, "Error al enviar el mensaje", Toast.LENGTH_SHORT).show();

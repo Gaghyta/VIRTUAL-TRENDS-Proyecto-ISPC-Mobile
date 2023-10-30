@@ -9,15 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ConfirmacionFinal extends AppCompatActivity {
     String fecha, horario;
+
+    SessionManager sessionManager;
     TextView tv;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion_final);
+
+
+        sessionManager = new SessionManager(getApplicationContext());
         tv = findViewById(R.id.tv_turno_mensaje);
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
@@ -41,6 +47,7 @@ public class ConfirmacionFinal extends AppCompatActivity {
                 } else if (id==R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id==R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
 

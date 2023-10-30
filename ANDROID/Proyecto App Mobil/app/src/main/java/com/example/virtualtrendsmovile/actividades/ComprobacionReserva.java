@@ -22,10 +22,14 @@ public class ComprobacionReserva extends AppCompatActivity {
     EditText etComprobante;
     private DatabaseHelper dbHelper;
 
+    SessionManager sessionManager;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprobacion_reserva);
         etComprobante = findViewById(R.id.et_turno_comprobante);
+
+        sessionManager = new SessionManager(getApplicationContext());
         //intent
         Intent i = getIntent();
         fecha = i.getStringExtra("fecha");
@@ -52,6 +56,7 @@ public class ComprobacionReserva extends AppCompatActivity {
                 } else if (id == R.id.turn) {
                     startActivity(new Intent(getApplicationContext(), NuestroServicio.class));
                 } else if (id == R.id.logout) {
+                    sessionManager.logout();
                     startActivity(new Intent(getApplicationContext(), InicioActivity.class));
                 }
 
