@@ -16,6 +16,9 @@ VIDEO PUBLICADO
 
 https://youtu.be/ycP2cn0UznI
 
+ARCHIVO ZIP LINK
+https://drive.google.com/file/d/1o1loR5thwYepRquJOE0wpxs1kdLZAig0/view?usp=sharing
+
 FIGMA LINK
 https://www.figma.com/file/WD7doXf6ZDKkadCCuAmOzs/REFERENCIAS-SISTEMA-VIRTUALTRENDS?type=design&node-id=826%3A3090&mode=design&t=0TaT7K052C6XWkoj-1
 
