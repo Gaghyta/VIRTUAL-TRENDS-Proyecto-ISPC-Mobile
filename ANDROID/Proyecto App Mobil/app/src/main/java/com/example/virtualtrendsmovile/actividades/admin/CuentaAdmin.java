@@ -53,8 +53,7 @@ public class CuentaAdmin extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Administrar.class));
                         finish();
                     }else {
-                        startActivity(new Intent(getApplicationContext(), Administrar.class));
-                        //Toast.makeText(CuentaAdmin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CuentaAdmin.this, "Codigo Invalido.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

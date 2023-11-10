@@ -133,6 +133,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             u.setDireccion(cursor.getString(3));
             u.setEmail(cursor.getString(4));
             u.setPassword(cursor.getString(5));
+            u.setUserType(cursor.getString(6));
+            u.setCodigo_admin(cursor.getString(7));
             return u;
         }else{
             return null;

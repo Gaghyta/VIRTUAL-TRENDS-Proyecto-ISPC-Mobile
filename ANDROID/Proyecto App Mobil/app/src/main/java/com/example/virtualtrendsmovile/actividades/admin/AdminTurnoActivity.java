@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.virtualtrendsmovile.R;
+import com.example.virtualtrendsmovile.util.SessionManager;
 
 public class AdminTurnoActivity extends AppCompatActivity {
     TextView txtAdminLogout;
     TextView txt_turno_atras;
+    SessionManager s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +21,12 @@ public class AdminTurnoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_turno);
         txtAdminLogout = findViewById(R.id.txt_admin_logout);
         txt_turno_atras= findViewById(R.id.txt_turno_atras);
+        s = new SessionManager(getApplicationContext());
 
         txtAdminLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                s.logout();
                 Intent intent = new Intent(AdminTurnoActivity.this, GetStartedActivity.class);
                 startActivity(intent);
             }
